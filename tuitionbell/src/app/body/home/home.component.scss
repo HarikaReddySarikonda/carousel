@@ -1,0 +1,209 @@
+// .container-fluid{
+//     padding-right: 0px !important;
+//     padding-left: 0px !important; 
+// }
+// .row {
+//   margin-right: 0px !important;
+//   margin-left: 0px !important;
+// }
+// Home CSS
+.centered {
+  position: absolute;
+  top: 55%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  display: block;
+  font-size: 3em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.btn.btn-primary.btn-sx {
+  background-color: purple; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.banner{
+background: url(../../../assets/Images/banner.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100vh;
+width: auto;
+}
+
+//Serices CSS
+.active{
+  
+  // -webkit-box-shadow:  32px 59px 17px 0px rgba(20,0,0,0.15), 25px 24px 22px 5px rgba(0,0,0,0.3);
+  // box-shadow: 32px 59px 17px 0px rgba(20,0,0,0.15), 25px 24px 22px 5px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+ 
+}
+@-webkit-keyframes fadeIn {                                                                          
+  0% { transform: translateX(100%);}
+  100% {transform: translateX(0);}
+}
+@keyframes fadeIn {
+  0% {opacity: 0.75;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  // -webkit-animation-name: fadeIn;
+  // animation-name: fadeIn;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+// FAQ CSS
+.btn{
+border: none;
+outline:none;
+box-shadow : none   
+}
+.btn:focus {
+outline: 0;
+box-shadow:none !important;
+}
+
+.faq{
+// background-color: lavender;
+// background: transparent;
+background: url(../../../assets/Images/banner.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100vh;
+width: auto;
+}
+
+// About-us CSS
+
+slide{
+//margin-left: auto !important;
+margin-right: 20px !important;
+margin-left: 20px !important
+}
+
+.img-carousel{
+max-width: 50px;
+display: block;
+margin: 0 auto;
+-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 100%;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+border: 2px solid #ffffff;
+}
+.h5-carousel{
+font-size: 14px;
+color: #5C5758;
+line-height: 150%;
+margin: 15px 0 4px;
+}
+
+
+.spec-customColor {
+color: #FE4066;
+}
+.p-carousel{
+text-align: left;
+max-width: 340px;
+margin: 21px auto 0;
+line-height: 24px;
+font-size: 14px;
+color: #5C5758;
+}
+.innerSlider-carousel{
+padding: 32px 15px 0;
+height: 400px;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+background: #ffffff;
+border: 1px solid #E9E9E9;
+border-radius: 4px;
+}
+.home-title{
+font-size: 36px;
+padding-bottom: 45px;
+text-transform: uppercase;
+font-family: Candara;
+
+}
+.container-carousel{
+position: relative;
+text-align: center;
+padding: 45px 19px;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+#myVideo {
+//position: fixed;
+position: absolute;
+right: 0;
+// bottom: 0;
+// top: 0;
+left:0;
+min-width: 100%;
+height: inherit;
+// min-height: 100%;
+}
+* {
+&:focus {
+outline: 0 !important;
+    
+}
+}
+.carousel-inner :focus{
+border: none;
+}
+.slick-slide {
+outline: none !important;
+}
+
+

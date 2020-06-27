@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   bgLight = false;
   bgColor : string = '';
   toggleclicked=false;
+  message = 'We are still working on the page.. Will back soon!'
   toggleClick(){
     this.toggleclicked=!this.toggleclicked;
     if(this.toggleclicked){
@@ -29,10 +30,13 @@ export class HeaderComponent implements OnInit {
     document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
   }
   toContactUs(){
-    // document.getElementById("carouselContainer").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    document.getElementById("contact").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
   }
   toFaq(){
     document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+  }
+  toAlert(){
+    alert(this.message)
   }
 
   constructor() { }

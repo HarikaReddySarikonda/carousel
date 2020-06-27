@@ -7,7 +7,7 @@
     }
     .navbar-brand{
     text-align: center;
-    color:#bb4f89;
+    color: rgb(71, 241, 233);
     font-size: 25px;
     letter-spacing: 4px;
     font-family: Candara;
@@ -20,6 +20,7 @@
     }
 .nav-link{
     position: relative;
+    cursor: pointer;
 }
 .nav-link {
 	&:before {
@@ -39,15 +40,15 @@
 	&:hover {
 		&:before {
 			visibility: visible;
-			transform: scaleX(1);
+            transform: scaleX(1);
         }
 	}
 }
-.nav-link {
-    &:focus {
-    color: #f70000 !important;
-    }
- }
+// .nav-link {
+//     &:focus {
+//     color:red !important;
+//     }
+//  }
  .nav-item {
         &:focus{
             color: violet !important;
@@ -71,7 +72,8 @@
     }
     }
     .form-inline{
-    padding: 1px 15px;  
+    padding: 1px 15px;
+    color: rgb(58, 240, 231);
     }
 
     .bg-light{
@@ -79,4 +81,4 @@
         background-color: rgb(235, 228, 235) !important;
       
     }
-    
+ 

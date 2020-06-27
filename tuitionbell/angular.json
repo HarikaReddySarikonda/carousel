@@ -127,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tuitionbell"
+    }
+  },
+  "defaultProject": "tuitionbell",
+  "cli": {
+    "analytics": false
+  }
 }

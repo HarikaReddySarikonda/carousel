@@ -44,8 +44,8 @@ h3 {
   font-weight: bold;
 }
 
-.btn.btn-primary.btn-sx {
-  background-color: purple; /* Green */
+.btn-primary{
+  background-color:  lightseagreen !important; /* Green */
   border: none;
   color: white;
   padding: 10px 40px;
@@ -55,7 +55,7 @@ h3 {
   font-size: 16px;
 }
 .banner{
-background: url(../../../assets/Images/banner.jpg) no-repeat center center fixed; 
+background: url(../../../assets/Images/background.jpg) no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

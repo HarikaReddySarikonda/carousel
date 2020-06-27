@@ -11,17 +11,17 @@
               <li class="nav-item" (click)="toHome()">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item" (click)="toAboutus()">
-                <a class="nav-link" >About Us</a>
-              </li>
               <li class="nav-item" (click)="toServices()">
                 <a class="nav-link" >Services</a>
               </li>
-              <li class="nav-item" (click)="toContactUs()">
-                <a class="nav-link" >Contact Us</a>
-              </li>
               <li class="nav-item" (click)="toFaq()">
                 <a class="nav-link" >FAQ</a>
+              </li>
+              <li class="nav-item" (click)="toAboutus()">
+                <a class="nav-link" >About Us</a>
+              </li>
+              <li class="nav-item" (click)="toContactUs()">
+                <a class="nav-link" >Contact Us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,9 +40,9 @@
             </ul>
             <form class="form-inline" *ngIf="!toggleclicked">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-              <button type="button" class="btn btn-outline-secondary">Search</button>
+              <button type="button" class="btn btn-outline-info" (click)='toAlert()'>Search</button>
             </form>
-            <button type="button" class="btn btn-outline-secondary" *ngIf="!toggleclicked">Login/Register</button>
+            <button type="button" class="btn btn-outline-info" (click)='toAlert()' *ngIf="!toggleclicked">Login/Register</button>
           </div>
         </nav>
         

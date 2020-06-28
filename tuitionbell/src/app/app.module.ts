@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AccordionModule.forRoot(),
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),

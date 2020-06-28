@@ -7,18 +7,17 @@
 //   margin-left: 0px !important;
 // }
 // Home CSS
-.container {
-  
-  top: 55%;
- // max-width: 650px;
-  //left: 53%;
-  //transform: translate(-50%, -50%);
-// display: grid;
+// .container {
+//   // top: 55%;
+//  // max-width: 650px;
+//   //left: 53%;
+//   //transform: translate(-50%, -50%);
+// // display: grid;
 
- //justify-content: center;
-// opacity: 0.4;
-// background-color: white;
-}
+//  //justify-content: center;
+// // opacity: 0.4;
+// // background-color: white;
+// }
 
 h1 {
   display: block;
@@ -27,7 +26,10 @@ h1 {
   margin-bottom: 0.67em;
   margin-left: 0;
   margin-right: 0;
-  color: whitesmoke;line-height: 1.6;font-weight: 600;
+  color: black;
+  line-height: 1.6;
+  // font-weight: 600;
+  font-weight: bold;
 }
 
 h2 {
@@ -37,7 +39,8 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  color: #ffffff; line-height: 1.5; font-weight: 500;
+  // color: black; line-height: 1.5; font-weight: 500;
+  font-weight: bold;  
 }
 
 h3 {
@@ -47,7 +50,8 @@ h3 {
   margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
-  color: #ffffff; line-height: 1.5; font-weight: 500;
+  // color:black; line-height: 1.5; font-weight: 500;
+  font-weight: bold;
 }
 
 .btn-primary{
@@ -67,35 +71,36 @@ background: url(../../../assets/Images/background.jpg) no-repeat center center f
 -o-background-size: cover;
 background-size: cover;
 height: 100vh;
-background-color: rgb(151, 148, 148);
-background-blend-mode: difference;
+// background-color: rgb(151, 148, 148);
+// background-blend-mode: difference;
 width: auto;
-
 }
-.banner::before{
-  width: auto;
-  height: 100vh;
-  background-color: linear-gradient(rgb(114, 112, 112),rgb(53, 51, 51));
-  z-index: -1;
-  position: absolute;
-  content: '';
 
-}
+// .banner::before{
+//   width: auto;
+//   height: 100vh;
+//   background-color: linear-gradient(rgb(114, 112, 112),rgb(53, 51, 51));
+//   z-index: -1;
+//   position: absolute;
+//   content: '';
+
+// }
 
 //Serices CSS
-.active{
-  
+//Serices CSS
+.service{
+  cursor: pointer;
+}
+.active{ 
   // -webkit-box-shadow:  32px 59px 17px 0px rgba(20,0,0,0.15), 25px 24px 22px 5px rgba(0,0,0,0.3);
   // box-shadow: 32px 59px 17px 0px rgba(20,0,0,0.15), 25px 24px 22px 5px rgba(0,0,0,0.3);
   border-radius: 15px;
-  
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-
- 
 }
+
 @-webkit-keyframes fadeIn {                                                                          
   0% { transform: translateX(100%);}
   100% {transform: translateX(0);}
@@ -110,10 +115,6 @@ width: auto;
   // animation-name: fadeIn;
   transition: 0.5s;
 }
-
-
-
-
 
 
 // FAQ CSS
@@ -206,12 +207,13 @@ font-size: 36px;
 padding-bottom: 45px;
 text-transform: uppercase;
 font-family: Candara;
-
+text-align: center;
 }
+
 .container-carousel{
 position: relative;
 text-align: center;
-padding: 45px 19px;
+padding: 0px 19px 45px 19px;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 }
@@ -238,5 +240,33 @@ border: none;
 .slick-slide {
 outline: none !important;
 }
+
+.about-bg{
+  background-image: url(../../../assets/Images/computer.jpg);
+}
+
+/// OWL CARAOUSL
+// #owl-demo .item{
+//   background: #3fbf79;
+//   padding: 30px 0px;
+//   margin: 10px;
+//   color: #FFF;
+//   -webkit-border-radius: 3px;
+//   -moz-border-radius: 3px;
+//   border-radius: 3px;
+//   text-align: center;
+// }
+// .customNavigation{
+//   text-align: center;
+// }
+// //use styles below to disable ugly selection
+// .customNavigation a{
+//   -webkit-user-select: none;
+//   -khtml-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+// }
 
 

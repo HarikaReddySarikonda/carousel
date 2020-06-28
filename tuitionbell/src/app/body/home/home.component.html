@@ -1,9 +1,7 @@
-<section id="home" class="banner">
+<section id="home" >
   <div class="picsum-img-wrapper">      
-          
-      <div class="container text-center mt-5 pt-5">
-          <div class="row mt-5 pt-5">
-              
+      <div class="banner container text-center mt-5 pt-5">
+          <div class="row mt-5 pt-5">  
               <div class="col-md-2 "></div>
               <div class="col-md-8" >
           <h1> Reverb Learning</h1>
@@ -16,89 +14,52 @@
           </div>
           <div class="col-md-2"></div>
           </div>
-          
       </div>
-      
   </div>                
 </section>
 <section id="services">
-  <div style="padding: 3%;">
-    <div class="col-12" [ngStyle]="{ 'text-align': 'center', padding: '1%' }">
-      <h4>Services</h4>
-    </div>
-    <!-- <div class="container " >
-          <div class="row">
-              <div class="col-md-6">
-                  <ul>
-                      <li class="row" *ngFor="let dataS of serviceData, let i = index" (click)="showTab(i,dataS)" [class.active]="selectedIndex==i">
-                          <div class="card" style="border-radius: 15px;">
-                              <div class="card-body" [ngStyle]="{'backgroundColor': selectedIndex==i ? 'rgb(160, 160, 207)' : ''}" style="border-radius: 13px;">
-                                  <h5 class="card-title">{{dataS.title}}</h5>
-                                  <p class="card-text">{{dataS.data}}</p>
-                              </div>
-                          </div>
-                          
-                      </li>
-                  </ul>
-                  </div>
-              <div class="col-md-6">
-                  <div class="row" *ngFor="let dataS of serviceData, let i = index">
-                      <img src={{dataS.img}}  [hidden]="selectedIndex!=i" style="height: 100%; width: 100%;" >
-                  </div>
-              </div> 
-          </div>
-      </div> -->
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <ul>
-            <li
-              class="row"
-              *ngFor="let dataS of serviceData; let i = index"
-              (click)="showTab(i, dataS)"
-            >
-              <div class="card" style="border: 0px;">
-                <div
-                  class="card-body"
-                  [ngStyle]="{
-                    backgroundColor:
-                      selectedIndex == i ? 'rgb(160, 160, 207)' : ''
-                  }"
-                  style="border-radius: 13px;"
-                >
-                  <h5 class="card-title">{{ dataS.title }}</h5>
-                  <p class="card-text" style="color: grey;">{{ dataS.data }}</p>
-                </div>
-              </div>
-            </li>
-          </ul>
+  <div class="container card">
+    <div class="card-body">
+      <div class="row card-title">
+        <div  class="col-12">
+          <h2 class="home-title" >! Services we provide ! </h2>
         </div>
-        <div class="col-md-6">
-          <div class="row" *ngFor="let dataS of serviceData; let i = index">
-            <img
-              src="{{ dataS.img }}"
-              [hidden]="selectedIndex != i"
-              style="height: 100%; width: 100%;"
-              class="active fadeIn"
-            />
+      </div>
+        <div  class="row card-text" >
+          <div class="container " >
+              <div class="row">
+                  <div class="col-md-6">
+                      <ul>
+                          <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
+                              <div class="card service" style="border:0px">
+                                  <div class="card-body" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#ebe4eb' : ''}" style="border-radius: 5px;">
+                                      <h5 class="card-title">{{dataS.title}}</h5>
+                                      <p class="card-text">{{dataS.data}}</p>
+                                  </div>
+                              </div>    
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="row" *ngFor="let dataS of serviceData, let i = index">
+                          <img src={{dataS.img}} [@myAni]="stateName"  [hidden]="selectedIndex!=i" style="height: 100%; width: 100%;" >
+                      </div>
+                  </div> 
+              </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
 <section id="faq">
-  <div id="frequently-question" [ngStyle]="{ padding: '3%' }">
-    <!-- [style.background-image]="'url(http://localhost:4200/assets/images/bg12.png)'" -->
+  <div id="frequently-question" >
+    <!--[ngStyle]="{ padding: '3%' }"  [style.background-image]="'url(http://localhost:4200/assets/images/bg12.png)'" -->
     <div class="container card">
       <div class="card-body">
         <div class="row card-title">
-          <div
-            class="col-12"
-            [ngStyle]="{ 'text-align': 'center', padding: '1%' }"
-          >
-            <h4>Frequently Asked Questions</h4>
+          <div  class="col-12">
+            <!-- <h4>Frequently Asked Questions</h4> -->
+            <h2 class="home-title"> ! Frequently Asked Questions !</h2>
           </div>
         </div>
         <div class="row card-text" [ngStyle]="{ 'padding-bottom': '2%' }">
@@ -234,4 +195,29 @@
       </div>
     </div>
   </div>
+  <!-- <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="item"><h1>1</h1></div>
+        <div class="item"><h1>2</h1></div>
+        <div class="item"><h1>3</h1></div>
+        <div class="item"><h1>4</h1></div>
+        <div class="item"><h1>5</h1></div>
+        <div class="item"><h1>6</h1></div>
+        <div class="item"><h1>7</h1></div>
+        <div class="item"><h1>8</h1></div>
+        <div class="item"><h1>9</h1></div>
+        <div class="item"><h1>10</h1></div>
+        <div class="item"><h1>11</h1></div>
+        <div class="item"><h1>12</h1></div>
+        <div class="item"><h1>13</h1></div>
+        <div class="item"><h1>14</h1></div>
+        <div class="item"><h1>15</h1></div>
+        <div class="item"><h1>16</h1></div>
+      </div>
+       
+      <div class="customNavigation">
+        <a class="btn prev">Previous</a>
+        <a class="btn next">Next</a>
+        <a class="btn play">Autoplay</a>
+        <a class="btn stop">Stop</a>
+      </div> -->
 </section>

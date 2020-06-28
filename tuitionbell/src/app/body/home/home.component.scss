@@ -138,6 +138,21 @@ background-size: cover;
 height: 100vh;
 width: auto;
 }
+//To disable border around card
+.card {
+   border:rgba(0,0,0,.125);
+}
+.btn-link {
+  font-weight: 400;
+  color: lightseagreen !important; /* Green */ 
+  //  #17a2b8bd;
+  text-decoration: none;
+}
+.btn-link:hover {
+  color: #1d2124;
+  text-decoration: underline;
+}
+
 
 // About-us CSS
 

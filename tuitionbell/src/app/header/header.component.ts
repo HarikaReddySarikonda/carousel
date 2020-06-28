@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
   bgLight = false;
   bgColor : string = '';
   toggleclicked=false;
-  message = 'We are still working on the page.. Will back soon!'
   toggleClick(){
     this.toggleclicked=!this.toggleclicked;
     if(this.toggleclicked){
@@ -34,9 +33,6 @@ export class HeaderComponent implements OnInit {
   }
   toFaq(){
     document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-  }
-  toAlert(){
-    alert(this.message)
   }
 
   constructor() { }

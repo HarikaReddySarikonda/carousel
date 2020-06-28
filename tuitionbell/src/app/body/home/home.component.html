@@ -1,25 +1,31 @@
 <section id="home">
   <div class="picsum-img-wrapper">
-      <div class="banner">
-              
+    <div class="banner">
       <div class="centered">
-          <h1 > Be Better. Learn Better </h1>
-          <h2> If you are determined to learn no one can stop you.</h2>
-          <h3> Here we are to produce the best come out from a student </h3>
-          <br>
-          <div class="text-center">
-            <a href="mailto:director@tuitionbell.in?subject=Important!&body=Hi" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="abc">Join Us</a>
-          </div>
+        <h1>Be Better. Learn Better</h1>
+        <h2>If you are determined to learn no one can stop you.</h2>
+        <h3>Here we are to produce the best come out from a student</h3>
+        <br />
+        <div class="text-center">
+          <a
+            href="mailto:director@tuitionbell.in?subject=Important!&body=Hi"
+            class="btn btn-primary btn-lg active"
+            role="button"
+            aria-pressed="true"
+            id="abc"
+            >Join Us</a
+          >
+        </div>
       </div>
-      </div>
-  </div>                
+    </div>
+  </div>
 </section>
-<section id="services">            
-  <div style="padding:3%">
-      <div class="col-12" [ngStyle]="{'text-align':'center', 'padding':'1%'}">
-          <h4>Services</h4>
-      </div>
-      <!-- <div class="container " >
+<section id="services">
+  <div style="padding: 3%;">
+    <div class="col-12" [ngStyle]="{ 'text-align': 'center', padding: '1%' }">
+      <h4>Services</h4>
+    </div>
+    <!-- <div class="container " >
           <div class="row">
               <div class="col-md-6">
                   <ul>
@@ -41,112 +47,190 @@
               </div> 
           </div>
       </div> -->
- 
-        <div class="container " >
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li class="row" *ngFor="let dataS of serviceData, let i = index" (click)="showTab(i,dataS)" >
-                            <div class="card" style="border:0px">
-                                <div class="card-body" [ngStyle]="{'backgroundColor': selectedIndex==i ? 'rgb(160, 160, 207)' : ''}" style="border-radius: 13px;">
-                                    <h5 class="card-title">{{dataS.title}}</h5>
-                                    <p class="card-text" style="color:grey">{{dataS.data}}</p>
-                                </div>
-                            </div>                  
-                        </li>
-                    </ul>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li
+              class="row"
+              *ngFor="let dataS of serviceData; let i = index"
+              (click)="showTab(i, dataS)"
+            >
+              <div class="card" style="border: 0px;">
+                <div
+                  class="card-body"
+                  [ngStyle]="{
+                    backgroundColor:
+                      selectedIndex == i ? 'rgb(160, 160, 207)' : ''
+                  }"
+                  style="border-radius: 13px;"
+                >
+                  <h5 class="card-title">{{ dataS.title }}</h5>
+                  <p class="card-text" style="color: grey;">{{ dataS.data }}</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="row" *ngFor="let dataS of serviceData, let i = index">
-                        <img src={{dataS.img}}  [hidden]="selectedIndex!=i" style="height: 100%; width: 100%;" class="active fadeIn">
-                    </div>
-                </div> 
-            </div>
+              </div>
+            </li>
+          </ul>
         </div>
+        <div class="col-md-6">
+          <div class="row" *ngFor="let dataS of serviceData; let i = index">
+            <img
+              src="{{ dataS.img }}"
+              [hidden]="selectedIndex != i"
+              style="height: 100%; width: 100%;"
+              class="active fadeIn"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<section id="faq">                
-  <div id="frequently-question"  [ngStyle]="{'padding':'3%'}">
-      <!-- [style.background-image]="'url(http://localhost:4200/assets/images/bg12.png)'" -->
-      <div class="container card">
+<section id="faq">
+  <div id="frequently-question" [ngStyle]="{ padding: '3%' }">
+    <!-- [style.background-image]="'url(http://localhost:4200/assets/images/bg12.png)'" -->
+    <div class="container card">
       <div class="card-body">
-          <div class="row card-title">
-              <div class="col-12" [ngStyle]="{'text-align':'center', 'padding':'1%'}">
-                      <h4>Frequently Asked Questions</h4>
-              </div>
+        <div class="row card-title">
+          <div
+            class="col-12"
+            [ngStyle]="{ 'text-align': 'center', padding: '1%' }"
+          >
+            <h4>Frequently Asked Questions</h4>
           </div>
-          <div class="row card-text" [ngStyle]="{'padding-bottom':'2%'}">
-              <div class="left-text col-sm-6" >
-              <span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-                  aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                  craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                  labore sustainable VHS. i cant hear u<br><br>
-              </span>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                  <accordion [closeOthers]="true" [isAnimated]="true">
-                      <accordion-group heading="What would you like to ask as Question 1 ?">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-                          aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                          sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                          craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                          labore sustainable VHS. i cant hear u
-                      </accordion-group>
-                      <accordion-group heading="Is it possible for human to fly?">
-                      <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-                          aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                          sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                          craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                          labore sustainable VHS.</p>
-                      </accordion-group>
-                      <accordion-group heading="Another group"> 
-                      <p>Some content</p>
-                      </accordion-group>
-                      <accordion-group heading="Another group">
-                      <p>Some content</p>
-                      </accordion-group>
-                  </accordion>
-              </div>
+        </div>
+        <div class="row card-text" [ngStyle]="{ 'padding-bottom': '2%' }">
+          <div class="left-text col-sm-6">
+            <span>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+              on it squid single-origin coffee nulla assumenda shoreditch et.
+              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+              lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them
+              accusamus labore sustainable VHS. i cant hear u<br /><br />
+            </span>
           </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <accordion [closeOthers]="true" [isAnimated]="true">
+              <accordion-group>
+                <button
+                  class="btn btn-link btn-block clearfix"
+                  accordion-heading type="button"
+                >
+                  <div class="pull-left float-left">
+                    What would you like to ask as Question 1 ?
+                  </div>
+                </button>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life
+                accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa
+                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                excepteur butcher vice lomo. Leggings occaecat craft beer
+                farm-to-table, raw denim aesthetic synth nesciunt you probably
+                haven't heard of them accusamus labore sustainable VHS. i cant
+                hear u
+              </accordion-group>
+              <accordion-group>
+                <button
+                  class="btn btn-link btn-block clearfix"
+                  accordion-heading
+                  type="button"
+                >
+                  <div class="pull-left float-left">
+                    Is it possible for human to fly?
+                  </div>
+                </button>
+                <p>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </p>
+              </accordion-group>
+              <accordion-group>
+                <button
+                  class="btn btn-link btn-block clearfix"
+                  accordion-heading
+                  type="button"
+                >
+                  <div class="pull-left float-left">Another Question</div>
+                </button>
+                <p>Some content</p>
+              </accordion-group>
+              <accordion-group>
+                <button
+                  class="btn btn-link btn-block clearfix"
+                  accordion-heading
+                  type="button"
+                >
+                  <div class="pull-left float-left">Another Question</div>
+                </button>
+                <p>Some content</p>
+              </accordion-group>
+            </accordion>
+          </div>
+        </div>
       </div>
-      </div>
+    </div>
   </div>
 </section>
 <section id="about-us">
   <div>
-      <!-- <video playsinline="playsinline" autoplay muted loop id="myVideo">
+    <!-- <video playsinline="playsinline" autoplay muted loop id="myVideo">
           <source src="../../../assets/Videos/Video1.mp4" type="video/mp4">
       </video> -->
-      <div class="container-md">
-          <div class="row">        
-              <div class="container-carousel">
-              <h2 class="home-title">! Meet us at World's End ! </h2>
-              <carousel [itemsPerSlide]="itemsPerSlide"
-              [singleSlideOffset]="singleSlideOffset"
-              [interval]="false"
-              [noWrap]="noWrap"
-              class="text-center"
-              >
-              <slide *ngFor="let slide of slides; let index=index" class="mx-auto" >
-                  <div class="innerSlider-carousel slick-slide">
-                  <img [src]="slide.image" alt="" class="img-carousel">
-                  <h5 class="h5-carousel">ARIJIT ROY</h5>
-                  <span class="spec-customColor">Innovator of ROYovation</span>
-                  <p class="p-carousel">We are happy we found you. We continuously use it in our <a target="_blank" class="spec" href="https://github.com/ROYopedia">UI/UX design agency</a>
-                      workflow. It is a very simple-to-use prototyping tool that transforms the way we collaborate
-                      on our interface design projects. It also helped to streamline our handoff from designers to developers.</p>
-                  
-                  </div>
-              </slide>
-              </carousel>
+    <div class="container-md">
+      <div class="row">
+        <div class="container-carousel">
+          <h2 class="home-title">! Meet us at World's End !</h2>
+          <carousel
+            [itemsPerSlide]="itemsPerSlide"
+            [singleSlideOffset]="singleSlideOffset"
+            [interval]="false"
+            [noWrap]="noWrap"
+            class="text-center"
+          >
+            <slide
+              *ngFor="let slide of slides; let index = index"
+              class="mx-auto"
+            >
+              <div class="innerSlider-carousel slick-slide">
+                <img [src]="slide.image" alt="" class="img-carousel" />
+                <h5 class="h5-carousel">ARIJIT ROY</h5>
+                <span class="spec-customColor">Innovator of ROYovation</span>
+                <p class="p-carousel">
+                  We are happy we found you. We continuously use it in our
+                  <a
+                    target="_blank"
+                    class="spec"
+                    href="https://github.com/ROYopedia"
+                    >UI/UX design agency</a
+                  >
+                  workflow. It is a very simple-to-use prototyping tool that
+                  transforms the way we collaborate on our interface design
+                  projects. It also helped to streamline our handoff from
+                  designers to developers.
+                </p>
               </div>
-          </div>
-          </div>
+            </slide>
+          </carousel>
+        </div>
       </div>
+    </div>
+  </div>
 </section>
-
-

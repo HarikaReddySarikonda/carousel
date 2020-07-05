@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <nav [class.bg-light]="bgLight" class="navbar navbar-expand-lg navbar-light fixed-top">
-          <a class="navbar-brand" href="#">Droona</a>
+          <a class="navbar-brand" href="#">TuitionBell</a>
           <button class="navbar-toggler" (click)="toggleClick()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -12,7 +12,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item" (click)="toServices()">
-                <a class="nav-link">Services</a>
+                <a class="nav-link active-page">Services</a>
               </li>
               <li class="nav-item" (click)="toAboutus()">
                 <a class="nav-link" >About Us</a>
@@ -40,12 +40,12 @@
             </ul>
             <form class="form-inline" *ngIf="!toggleclicked">
               <input class="form-control" type="search" placeholder="learn something new!!" aria-label="Search">
-              <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">
+              <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
                 Search
               </button>
             </form>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
               Login/Register
             </button>
           </div>

@@ -2,9 +2,9 @@
     a{
     text-transform: uppercase;
     //font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: white;
     &:hover, &:focus, &:active {
-        color: lightseagreen;
+        color: #c8dd82;
         background-color: transparent;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -12,17 +12,18 @@
       }
     }
     }
+
     .navbar-brand{
     text-align: center;
-    color: rgb(71, 241, 233);
+    color: white;
     font-size: 25px;
     letter-spacing: 4px;
-    font-family: Candara;
+    font-family: Montserrat;
     }
     .navbar-nav{
     text-align: center;
     color: #bb4f89;
-    font-family: Candara;
+    font-family: Montserrat;
     font-size: 18px;
     }
 .nav-link{

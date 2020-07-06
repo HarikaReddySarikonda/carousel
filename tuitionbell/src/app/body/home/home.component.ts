@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyAnimation } from '../../util/animationUtil'
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+// import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-home',
@@ -85,11 +85,11 @@ export class HomeComponent implements OnInit {
   sendEmail(e: Event) {
     console.log("email");
     e.preventDefault();
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_USER_ID')
-      .then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_USER_ID')
+    //   .then((result: EmailJSResponseStatus) => {
+    //     console.log(result.text);
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
   }
 }

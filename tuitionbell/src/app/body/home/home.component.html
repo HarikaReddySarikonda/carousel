@@ -277,33 +277,34 @@
         <h2 class="home-title"> ! Contact Us !</h2>
       </div>
     </div>
-
-  <form method="post" name="cform" id="cform">
-    <div class="form-row clearfix">
-      <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" placeholder="Your Name">
-    </div>
-    <br>
-    <div class="form-row clearfix">
-      <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" placeholder="Email address">
-    </div>
-    <br>
-    <div class="form-row clearfix">
-      <textarea name="comments" id="comments" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" placeholder="Your Comments"></textarea>
-    </div>
-    <br>
-    <!-- <input type="submit" id="submit" name="send" class="button" value="Send message"> -->
     <div class="row">
-      <div class="col-4"></div>
-      <div class="col-4">
-        <div (click)="sendEmail($event)" class="btn btn-primary send">
-          Send
-        </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img src="../../../assets/Images/desk-office-pen-ruler-2097.jpg" style="height: inherit; width: inherit;">
       </div>
-      <div class="col-4"></div>
-     
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <form method="post" name="cform" id="cform" style="height: inherit; width: inherit; padding-top: 5%;">
+          <br>
+          <div class="form-row clearfix">
+            <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" placeholder="Your Name">
+          </div>
+          <br>
+          <div class="form-row clearfix">
+            <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" placeholder="Email address">
+          </div>
+          <br>
+          <div class="form-row clearfix">
+            <textarea name="comments" id="comments" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" placeholder="Your Comments"></textarea>
+          </div>
+          <br>
+            <div class="text-center">
+              <div (click)="sendEmail($event)" class="btn btn-primary send">
+                Send
+              </div>
+            </div>
+          <div id="simple-msg"></div>
+        </form>
+      </div>
     </div>
-     
-    <div id="simple-msg"></div>
-  </form>
+  
   </div>
   </section>

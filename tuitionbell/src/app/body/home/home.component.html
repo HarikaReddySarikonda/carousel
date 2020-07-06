@@ -8,7 +8,7 @@
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     
     </head>
-<section id="home" >
+<!-- <section id="home" > -->
 <!-- <section id="home" >
   <div class="picsum-img-wrapper">      
       <div class="banner text-center">
@@ -42,9 +42,9 @@
             <div class="layer"></div>
               <img src="../../../assets/Images/booksIn.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h1> Your growth | Our responsibilty </h1>
-                <p>something</p>
-                <p>something2</p><br><br>
+                <h1> Learn Better | Learn Smarter </h1>
+                <p>Achive academic excellence with our superior educational packs, experienced and verified Tutors</p>
+                <p>and free doubt solving forum</p><br><br>
                 <!-- <button type="button" class="btn btn-outline-light btn-lg active" data-toggle="modal" data-target="#exampleModal">
                   Join Us
                 </button> -->
@@ -54,16 +54,26 @@
             <div class="layer"></div>
             <img src="../../../assets/Images/study.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Student Page</h5>
-              <p>about students</p>
+              <h2>STUDY</h2>
+              <p>Learn anything at anytime!</p>
+              <p>We help you find the tuter you want at the fingertip. Anytime, Anywhere!</p>
             </div>
           </div>
           <div class="carousel-item">
             <div class="layer"></div>
             <img src="../../../assets/Images/teach.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>About tutor</h5>
-              <p>Need Help. Here we are!!</p>
+              <h2>TEACH</h2>
+              <p>We help you Teach and Earn money as per your experties.</p>
+            </div>  
+          </div>
+          <div class="carousel-item">
+            <div class="layer"></div>
+            <img src="../../../assets/Images/study.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Assignments</h2>
+              <p>Facing Difficulty in acadamic projects?</p>
+              <p>Post the kind of project you need help with, and we will get you the best in the field, to help you!</p>
             </div>  
           </div>
       </div>
@@ -87,7 +97,7 @@
                       <ul>
                           <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
                               <div class="card service" style="border:0px">
-                                  <div class="card-body" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#ebe4eb' : ''}" style="border-radius: 5px;">
+                                  <div class="card-body" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#c8dd82' : ''}" style="border-radius: 5px;">
                                       <h5 class="card-title">{{dataS.title}}</h5>
                                       <p class="card-text">{{dataS.data}}</p>
                                   </div>
@@ -258,4 +268,42 @@
   </div>
 </div>
 </section>
-</section>
+
+<section id="contact-Us">
+  <div class="container">
+    <br><br>
+    <div class="col-md-12">
+      <div class="section-title text-center wow zoomIn">
+        <h2 class="home-title"> ! Contact Us !</h2>
+      </div>
+    </div>
+
+  <form method="post" name="cform" id="cform">
+    <div class="form-row clearfix">
+      <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" placeholder="Your Name">
+    </div>
+    <br>
+    <div class="form-row clearfix">
+      <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" placeholder="Email address">
+    </div>
+    <br>
+    <div class="form-row clearfix">
+      <textarea name="comments" id="comments" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" placeholder="Your Comments"></textarea>
+    </div>
+    <br>
+    <!-- <input type="submit" id="submit" name="send" class="button" value="Send message"> -->
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <div (click)="sendEmail($event)" class="btn btn-primary send">
+          Send
+        </div>
+      </div>
+      <div class="col-4"></div>
+     
+    </div>
+     
+    <div id="simple-msg"></div>
+  </form>
+  </div>
+  </section>

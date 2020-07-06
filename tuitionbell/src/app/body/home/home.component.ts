@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyAnimation } from '../../util/animationUtil'
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -19,21 +21,31 @@ export class HomeComponent implements OnInit {
    public selectedIndex = 0;
    public serviceData=[
      {
-       title:"Product manager",
-       data:"Write, share and update PRD | Add interactions and logic to transform prototypes | Manage design tasks.",
+       title:"Customized Educutional Packs",
+       data:"",
        img:'../../../assets/Images/man.jpg'
        //'../../../assets/Images/man.jpg'
      },
      {
-       title:"Designer",
-       data:"Upload designs from Sketch/PS/XD/Axure/Mockplus RP | Collaborate online - share and comment design decisions",
+       title:"Tutoring Solutions",
+       data:"",
        img:"../../../assets/Images/people.jpg"
      },
      {
-       title:"Front-end developer",
-       data:"Get product requirements, specs, assets, interactions flows and CSS code snippets without a hitch.",
+       title:"Oportutinities for tutors in the City",
+       data:"",
        img:"../../../assets/Images/computer.jpg"
-     }
+     },
+     {
+      title:"Open Question Posting Fourm",
+      data:"",
+      img:"../../../assets/Images/people.jpg"
+    },
+    {
+      title:"Live tracking of Educational Growth",
+      data:"",
+      img:"../../../assets/Images/computer.jpg"
+    }
  ]
  
  async showTab(n,data){
@@ -52,7 +64,6 @@ export class HomeComponent implements OnInit {
    return new Promise( resolve => setTimeout(resolve, ms) );
  }
  
- 
 
 // About Us
   itemsPerSlide = 3;
@@ -70,28 +81,15 @@ export class HomeComponent implements OnInit {
   clickfun (): void{
     console.log("click");
   }
-    // owl = document.getElementById("#owl-demo");
- 
-  // owl.owlCarousel({
-  //     items : 10, //10 items above 1000px browser width
-  //     itemsDesktop : [1000,5], //5 items between 1000px and 901px
-  //     itemsDesktopSmall : [900,3], // betweem 900px and 601px
-  //     itemsTablet: [600,2], //2 items between 600 and 0
-  //     itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-  // });
- 
-  // // Custom Navigation Events
-  // $(".next").click(function(){
-  //   owl.trigger('owl.next');
-  // })
-  // $(".prev").click(function(){
-  //   owl.trigger('owl.prev');
-  // })
-  // $(".play").click(function(){
-  //   owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
-  // })
-  // $(".stop").click(function(){
-  //   owl.trigger('owl.stop');
-  // })
 
+  sendEmail(e: Event) {
+    console.log("email");
+    e.preventDefault();
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_USER_ID')
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
 }

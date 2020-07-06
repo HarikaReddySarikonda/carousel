@@ -55,7 +55,7 @@
 // }
 
 .layer {
-  background: #1c416a;
+  background:#1c416a9e; // #1c416a;
   position: absolute;
   top: 0;
   right: 0;
@@ -186,7 +186,7 @@ width: auto;
   padding: 0;
 }
 #accordion .panel-title a {
-  background:lightseagreen none repeat scroll 0 0;
+  background:#1c416a none repeat scroll 0 0;
   border: 1px solid transparent;
   border-radius: 30px;
   color: #fff;
@@ -198,12 +198,12 @@ width: auto;
   transition: all 0.3s ease 0s;
 }
 #accordion .panel-title a.collapsed {
-  background:#ebe4eb none repeat scroll 0 0;
+  background:#c8dd82 none repeat scroll 0 0;
   border: 1px solid #ddd;
   color: #333;
 }
 #accordion .panel-title a::after, #accordion .panel-title a.collapsed::after {
-  background:lightseagreen none repeat scroll 0 0;
+  background:#1c416a none repeat scroll 0 0;
   border: 1px solid transparent;
   border-radius: 50%;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
@@ -352,3 +352,28 @@ outline: none !important;
 // }
 
 
+.form-row {
+  // margin-bottom: 17px;
+  font-size: 17px;
+  letter-spacing: 0;
+  // border: #93a35d 1px solid;
+  // color: #93a35d;
+}
+.center{
+  justify-content: center;
+}
+.form-row>.col, .form-row>[class*=col-] {
+  padding-right: 5px;
+  padding-left: 5px;
+  border: #93a35d 2px solid !important;
+  color: #1c416a;
+  box-shadow: #1c416a6e 2px 2px;
+
+}
+.send{
+  // border: #1c416a 1px solid ;
+  color: #1c416a;
+  font-weight: 600;
+  font-size:  18px;
+  background-color: #93a35d;
+}

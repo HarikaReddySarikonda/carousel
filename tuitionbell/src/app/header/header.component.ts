@@ -19,21 +19,67 @@ export class HeaderComponent implements OnInit {
     this.bgColor='';
     }
   }
-  toHome(){
+    toHome(){
     document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    var element=document.getElementsByClassName('nav-link');
+   for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
+      var element=document.getElementsByClassName("nav-link");
+      element[y].classList.remove('highlight');
+     }
+     element[0].classList.add('highlight');
   }
   toAboutus(){
     document.getElementById("about-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    var element=document.getElementsByClassName('nav-link');
+    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
+      var element=document.getElementsByClassName("nav-link");
+      element[y].classList.remove('highlight');
+     }
+     element[2].classList.add('highlight');
   }
   toServices(){
     document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    var element=document.getElementsByClassName('nav-link');
+    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
+      var element=document.getElementsByClassName("nav-link");
+      element[y].classList.remove('highlight');
+     }
+     element[1].classList.add('highlight');
   }
   toContactUs(){
     document.getElementById("contact").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    var element=document.getElementsByClassName('nav-link');
+    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
+      var element=document.getElementsByClassName("nav-link");
+      element[y].classList.remove('highlight');
+     }
+    
+    element[4].classList.add('highlight');
   }
   toFaq(){
     document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    var element=document.getElementsByClassName('nav-link');
+    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
+      var element=document.getElementsByClassName("nav-link");
+      element[y].classList.remove('highlight');
+     }
+     element[3].classList.add('highlight');
   }
+  // toHome(){
+  //   document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+  // }
+  // toAboutus(){
+  //   document.getElementById("about-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+  // }
+  // toServices(){
+  //   document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+  // }
+  // toContactUs(){
+  //   document.getElementById("contact").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+  // }
+  // toFaq(){
+  //   document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+  // }
 
   constructor() { }
   @HostListener('document:scroll') scrollFunction(){

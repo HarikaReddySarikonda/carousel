@@ -84,11 +84,13 @@
     padding: 1px 15px;
     color: rgb(58, 240, 231);
     }
-
+    .highlight{
+        background-color: #c8dd82;
+    }
     .bg-light{
         transition: all 1s ease-in-out;
-        background-color: rgb(235, 228, 235) !important;
-      
+        // background-color: rgb(235, 228, 235) !important;
+        background-color:  #1c416a !important;
     }
     ::placeholder {
         font-size: 15px;

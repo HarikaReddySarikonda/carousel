@@ -1,7 +1,7 @@
-// .container-fluid{
-//     padding-right: 0px !important;
-//     padding-left: 0px !important; 
-// }
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important; 
+}
 // .row {
 //   margin-right: 0px !important;
 //   margin-left: 0px !important;
@@ -19,43 +19,63 @@
 // // background-color: white;
 // }
 
-h1 {
-  display: block;
-  font-size: 3em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  color: black;
-  line-height: 1.6;
-  // font-weight: 600;
-  font-weight: bold;
+// h1 {
+//   display: block;
+//   font-size: 3em;
+//   margin-top: 0.67em;
+//   margin-bottom: 0.67em;
+//   margin-left: 0;
+//   margin-right: 0;
+//   color:white;
+//   line-height: 1.6;
+//   // font-weight: 600;
+//   font-weight: bold;
+// }
+
+// h2 {
+//   display: block;
+//   font-size: 1.5em;
+//   margin-top: 0.83em;
+//   margin-bottom: 0.83em;
+//   margin-left: 0;
+//   margin-right: 0;
+//   color:white;
+//   font-weight: bold;  
+// }
+
+// h3 {
+//   display: block;
+//   font-size: 1.17em;
+//   margin-top: 1em;
+//   margin-bottom: 1em;
+//   margin-left: 0;
+//   margin-right: 0;
+//   color:white;
+//   font-weight: bold;
+// }
+
+.layer {
+  background: #1c416a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
 }
 
-h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-  margin-left: 0;
-  margin-right: 0;
-  // color: black; line-height: 1.5; font-weight: 500;
-  font-weight: bold;  
+.carousel-caption{
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
-
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  // color:black; line-height: 1.5; font-weight: 500;
-  font-weight: bold;
-}
-
 .btn-primary{
-  background-color:  lightseagreen !important; /* Green */
+  background-color: #c8dd82 !important; /* Green */
   border: none;
   color: white;
   padding: 10px 40px;
@@ -65,7 +85,8 @@ h3 {
   font-size: 16px;
 }
 .banner{
-background: url(../../../assets/Images/background.jpg) no-repeat center center fixed; 
+  
+background: url(../../../assets/Images/booksIn.jpg) no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -74,6 +95,9 @@ height: 100vh;
 // background-color: rgb(151, 148, 148);
 // background-blend-mode: difference;
 width: auto;
+//background-opacity: 0.5;
+//-moz-backface-visibility: hidden;
+//background-color: transparent;
 }
 
 // .banner::before{

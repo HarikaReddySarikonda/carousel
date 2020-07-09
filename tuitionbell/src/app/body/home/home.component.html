@@ -123,71 +123,58 @@
     <!-- <video playsinline="playsinline" autoplay muted loop id="myVideo">
           <source src="../../../assets/Videos/Video1.mp4" type="video/mp4">
       </video> -->
-    <div class="container-md">
-      <div class="row">
-        <div class="container-carousel">
-          <h2 class="home-title">! Meet us at World's End !</h2>
-          <carousel
-            [itemsPerSlide]="itemsPerSlide"
-            [singleSlideOffset]="singleSlideOffset"
-            [interval]="false"
-            [noWrap]="noWrap"
-            class="text-center"
-          >
-            <slide
-              *ngFor="let slide of slides; let index = index"
-              class="mx-auto"
-            >
-              <div class="innerSlider-carousel slick-slide">
-                <img [src]="slide.image" alt="" class="img-carousel" />
-                <h5 class="h5-carousel">ARIJIT ROY</h5>
-                <span class="spec-customColor">Innovator of ROYovation</span>
-                <p class="p-carousel">
-                  We are happy we found you. We continuously use it in our
-                  <a
-                    target="_blank"
-                    class="spec"
-                    href="https://github.com/ROYopedia"
-                    >UI/UX design agency</a
-                  >
-                  workflow. It is a very simple-to-use prototyping tool that
-                  transforms the way we collaborate on our interface design
-                  projects. It also helped to streamline our handoff from
-                  designers to developers.
-                </p>
-              </div>
-            </slide>
-          </carousel>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title text-center">
+            <h2 class="home-title">! Meet us at World's End !</h2>
+          </div>  
+          </div>       
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- <div id="owl-demo" class="owl-carousel owl-theme">
-        <div class="item"><h1>1</h1></div>
-        <div class="item"><h1>2</h1></div>
-        <div class="item"><h1>3</h1></div>
-        <div class="item"><h1>4</h1></div>
-        <div class="item"><h1>5</h1></div>
-        <div class="item"><h1>6</h1></div>
-        <div class="item"><h1>7</h1></div>
-        <div class="item"><h1>8</h1></div>
-        <div class="item"><h1>9</h1></div>
-        <div class="item"><h1>10</h1></div>
-        <div class="item"><h1>11</h1></div>
-        <div class="item"><h1>12</h1></div>
-        <div class="item"><h1>13</h1></div>
-        <div class="item"><h1>14</h1></div>
-        <div class="item"><h1>15</h1></div>
-        <div class="item"><h1>16</h1></div>
-      </div>
-       
-      <div class="customNavigation">
-        <a class="btn prev">Previous</a>
-        <a class="btn next">Next</a>
-        <a class="btn play">Autoplay</a>
-        <a class="btn stop">Stop</a>
-      </div> -->
-</section>
+        <div class="row">
+          <div class="col-md-1" style="text-align: center;">
+            <!-- controls -->
+            <button class="control " (click)="onPreviousClick()">       
+              <span class="arrow left"></span>
+            </button>
+          </div>
+          <div class="col-md-10">    
+          <div class="carousel" >      
+            <div  class="container" >
+              <div class="row" >
+                <div class="col-md-4 " *ngFor="let slide of subslide">
+                  <div class="innerSlider-carousel slick-slide">
+                    <img src={{slide.img}} alt="" class="img-carousel"/>
+                    <h5 class="h5-carousel">{{slide.header}}</h5>
+                    <span class="spec-customColor">{{slide.position}}</span>
+                    <p class="p-carousel">
+                      We are happy we found you. We continuously use it in our
+                      <a
+                        target="_blank"
+                        class="spec"
+                        href="https://github.com/ROYopedia"
+                        >UI/UX design agency</a
+                      >
+                      workflow. It is a very simple-to-use prototyping tool that
+                      transforms the way we collaborate on our interface design
+                      projects. It also helped to streamline our handoff from
+                      designers to developers.
+                    </p>
+                  </div>
+          </div>
+          </div>
+             </div> 
+          </div>
+          </div>      
+             <div class="col-md-1" style="text-align: center">
+              <button class="control  "  (click)="onNextClick()">         
+                <span class="arrow right"></span>
+              </button>
+            </div>
+            </div>
+            </div>
+       </div>
+  </section>
 
 <section id="faq">
   <div class="container">

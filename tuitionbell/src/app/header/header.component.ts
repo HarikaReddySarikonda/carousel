@@ -10,15 +10,17 @@ export class HeaderComponent implements OnInit {
   bgLight = false;
   bgColor : string = '';
   toggleclicked=false;
+
   toggleClick(){
     this.toggleclicked=!this.toggleclicked;
     if(this.toggleclicked){
-    this.bgColor = "white";
+    this.bgColor = "rgb(2, 46, 82)";
     }
     else{
     this.bgColor='';
     }
   }
+
     toHome(){
     document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
     var element=document.getElementsByClassName('nav-link');
@@ -36,7 +38,14 @@ export class HeaderComponent implements OnInit {
       element[y].classList.remove('highlight');
      }
      element[2].classList.add('highlight');
-  }
+    //  var x = document.getElementById("navbarSupportedContent");
+    //  x.style.display = "none";
+    //   if (x.style.display === "none") {
+    //     x.style.display = "block";
+    //   } else {
+    //     x.style.display = "inline";
+    //   }
+    }
   toServices(){
     document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
     var element=document.getElementsByClassName('nav-link');

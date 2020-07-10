@@ -9,16 +9,11 @@ export class HeaderComponent implements OnInit {
 
   bgLight = false;
   bgColor : string = '';
-  toggleclicked=false;
 
   toggleClick(){
-    this.toggleclicked=!this.toggleclicked;
-    if(this.toggleclicked){
-    this.bgColor = "rgb(2, 46, 82)";
-    }
-    else{
-    this.bgColor='';
-    }
+    this.bgColor="rgb(2, 46, 82)";
+    var x = document.getElementById("navbarSupportedContent");
+    if(x.style.display == "none") x.style.display='block';
   }
 
     toHome(){
@@ -29,6 +24,9 @@ export class HeaderComponent implements OnInit {
       element[y].classList.remove('highlight');
      }
      element[0].classList.add('highlight');
+     this.bgColor = "";
+     var x = document.getElementById("navbarSupportedContent");
+     x.style.display = "none";
   }
   toAboutus(){
     document.getElementById("about-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
@@ -38,13 +36,9 @@ export class HeaderComponent implements OnInit {
       element[y].classList.remove('highlight');
      }
      element[2].classList.add('highlight');
-    //  var x = document.getElementById("navbarSupportedContent");
-    //  x.style.display = "none";
-    //   if (x.style.display === "none") {
-    //     x.style.display = "block";
-    //   } else {
-    //     x.style.display = "inline";
-    //   }
+     this.bgColor = "";
+     var x = document.getElementById("navbarSupportedContent");
+     x.style.display = "none";
     }
   toServices(){
     document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
@@ -54,6 +48,9 @@ export class HeaderComponent implements OnInit {
       element[y].classList.remove('highlight');
      }
      element[1].classList.add('highlight');
+     this.bgColor = "";
+     var x = document.getElementById("navbarSupportedContent");
+     x.style.display = "none";
   }
   toContactUs(){
     document.getElementById("contact").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
@@ -64,6 +61,9 @@ export class HeaderComponent implements OnInit {
      }
     
     element[4].classList.add('highlight');
+    this.bgColor = "";
+    var x = document.getElementById("navbarSupportedContent");
+    x.style.display = "none";
   }
   toFaq(){
     document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
@@ -73,6 +73,9 @@ export class HeaderComponent implements OnInit {
       element[y].classList.remove('highlight');
      }
      element[3].classList.add('highlight');
+     this.bgColor = "";
+     var x = document.getElementById("navbarSupportedContent");
+     x.style.display = "none";
   }
   // toHome(){
   //   document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})

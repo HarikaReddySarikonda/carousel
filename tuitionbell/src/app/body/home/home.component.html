@@ -96,12 +96,14 @@
                   <div class="col-md-6">
                       <ul>
                           <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
-                              <div class="card service" style="border:0px">
-                                  <div class="card-body" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#c8dd82' : ''}" style="border-radius: 5px;">
-                                      <h5 class="card-title">{{dataS.title}}</h5>
-                                      <p class="card-text">{{dataS.data}}</p>
-                                  </div>
-                              </div>    
+                            <div class="col-12" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#c8dd82' : ''}" style="border-radius: 5px;">
+                              <div class="card service" style="border:0px; background-color: inherit;">
+                                <div class="card-body" style="background-color: inherit;" >
+                                    <h5 class="card-title">{{dataS.title}}</h5>
+                                    <p class="card-text">{{dataS.data}}</p>
+                                </div>
+                              </div>
+                            </div>
                           </li>
                       </ul>
                   </div>
@@ -186,7 +188,53 @@
       </div>
     
     <div class="row">				
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is you question 1? 
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is you question 2? 
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" >
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What is you question 3? 
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion" >
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--- END COL -->		
+      <div class="col-md-6">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">

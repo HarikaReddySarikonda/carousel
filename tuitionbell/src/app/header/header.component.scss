@@ -1,6 +1,6 @@
 .navbar-nav{
     a{
-    text-transform: uppercase;
+    // text-transform: uppercase;
     //font-weight: bold;
     color: white;
     &:hover, &:focus, &:active {
@@ -18,14 +18,14 @@
     color: white;
     font-size: 25px;
     letter-spacing: 4px;
-    font-family: Montserrat;
+    // font-family: Montserrat;
     font-weight: bold
     }
     .navbar-nav{
     text-align: center;
     color: #bb4f89;
-    font-family: Montserrat;
-    font-size: 18px;
+    // font-family: Montserrat;
+    font-size: 20px;
     }
 .nav-link{
     position: relative;
@@ -94,7 +94,7 @@
     }
     ::placeholder {
         font-size: 15px;
-        font-family:monospace;
+        // font-family:monospace;
     }
  
 // styling for search bar

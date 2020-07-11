@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
       var element=document.getElementsByClassName("nav-link");
       element[y].classList.remove('highlight');
      }
-     element[2].classList.add('highlight');
+     element[1].classList.add('highlight');
      this.bgColor = "";
      var x = document.getElementById("navbarSupportedContent");
      x.style.display = "none";
@@ -47,20 +47,20 @@ export class HeaderComponent implements OnInit {
       var element=document.getElementsByClassName("nav-link");
       element[y].classList.remove('highlight');
      }
-     element[1].classList.add('highlight');
+     element[2].classList.add('highlight');
      this.bgColor = "";
      var x = document.getElementById("navbarSupportedContent");
      x.style.display = "none";
   }
   toContactUs(){
-    document.getElementById("contact").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    document.getElementById("contact-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
     var element=document.getElementsByClassName('nav-link');
     for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
       var element=document.getElementsByClassName("nav-link");
       element[y].classList.remove('highlight');
      }
     
-    element[4].classList.add('highlight');
+    element[5].classList.add('highlight');
     this.bgColor = "";
     var x = document.getElementById("navbarSupportedContent");
     x.style.display = "none";
@@ -72,10 +72,26 @@ export class HeaderComponent implements OnInit {
       var element=document.getElementsByClassName("nav-link");
       element[y].classList.remove('highlight');
      }
+     element[4].classList.add('highlight');
+     this.bgColor = "";
+     var x = document.getElementById("navbarSupportedContent");
+     x.style.display = "none";
+  }
+  toTheTeam(){
+    document.getElementById("about-team").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
+    var element=document.getElementsByClassName('nav-link');
+    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
+      var element=document.getElementsByClassName("nav-link");
+      element[y].classList.remove('highlight');
+     }
      element[3].classList.add('highlight');
      this.bgColor = "";
      var x = document.getElementById("navbarSupportedContent");
      x.style.display = "none";
+  }
+  toElem(elem){
+console.log(elem);
+
   }
   // toHome(){
   //   document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})

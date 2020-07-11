@@ -81,6 +81,32 @@
   </div>
   </section>  
 
+  <section id="about-us">
+    <br><br>
+  <div class="container card no-border">
+    <div class="card-body" >
+      <div class="row card-title">
+        <div  class="col-12">
+          <h2 class="home-title" >! About Us ! </h2>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            Tuitionbell provides a platform for students who are facing hurdles in their academics or eager to learn something new, 
+            to find exemplary and trustworthy tutors in their locality through interactive web and mobile applications to enhance
+            their knowledge and skills.<br> We strive to provide high quality education to the students through one-on-one interactive
+            sessions with the tutor at their door step or through online live video sessions at the convenient time scheduled by the student and the tutor.
+            <br> We provide a great platform of learning opportunities to students with progress tracking and an earning opportunity to tutors.
+            <br> Tuitionbell also provides an open question forum to discuss and exchange knowledge on various academic and general topics and
+             to provide advices regarding assignments and academic projects.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <section id="services">
   <br><br>
   <div class="container card">
@@ -97,7 +123,7 @@
                       <ul>
                           <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
                             <div class="col-12" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#c8dd82' : ''}" style="border-radius: 5px;">
-                              <div class="card service" style="border:0px; background-color: inherit;">
+                              <div class="card service no-border" style="background-color: inherit;">
                                 <div class="card-body" style="background-color: inherit;" >
                                     <h5 class="card-title">{{dataS.title}}</h5>
                                     <p class="card-text">{{dataS.data}}</p>
@@ -119,7 +145,7 @@
     </div>
 </section>
 
-<section id="about-us">
+<section id="about-team">
   <br><br>
   <div>
     <!-- <video playsinline="playsinline" autoplay muted loop id="myVideo">
@@ -304,7 +330,7 @@
 </div>
 </section>
 
-<section id="contact-Us">
+<section id="contact-us">
   <div class="container">
     <br><br>
     <div class="col-md-12">

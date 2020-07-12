@@ -135,6 +135,10 @@ width: auto;
 .service{
   cursor: pointer;
 }
+.activeService{
+  background-color: #c8dd82;
+  border-radius: 5px;
+}
 .active{ 
   // -webkit-box-shadow:  32px 59px 17px 0px rgba(20,0,0,0.15), 25px 24px 22px 5px rgba(0,0,0,0.3);
   // box-shadow: 32px 59px 17px 0px rgba(20,0,0,0.15), 25px 24px 22px 5px rgba(0,0,0,0.3);
@@ -257,7 +261,10 @@ width: auto;
   border-left: 1px dashed #8c8c8c;
   padding-left: 25px;
 }
-// About-us CSS
+// The team CSS
+.arrowPosition{
+  text-align: center;
+}
 .container {
 	display: block;
 	height: 100%;

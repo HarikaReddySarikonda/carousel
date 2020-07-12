@@ -118,13 +118,13 @@
       </div>
         <div  class="row card-text" >
           <div class="container " >
-              <div class="row">
+              <div class="row"> 
                   <div class="col-md-6">
                       <ul>
-                          <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
-                            <div class="col-12" [ngStyle]="{'backgroundColor': selectedIndex==i ? '#c8dd82' : ''}" style="border-radius: 5px;">
+                          <li class="row"  *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
+                            <div class="col-12" [ngClass]="{'activeService': selectedIndex==i }">
                               <div class="card service no-border" style="background-color: inherit;">
-                                <div class="card-body" style="background-color: inherit;" >
+                                <div class="card-body" style="background-color: inherit;">
                                     <h5 class="card-title">{{dataS.title}}</h5>
                                     <p class="card-text">{{dataS.data}}</p>
                                 </div>
@@ -139,6 +139,7 @@
                       </div>
                   </div> 
               </div>
+
           </div>
         </div>
       </div>
@@ -160,7 +161,7 @@
           </div>       
         </div>
         <div class="row">
-          <div class="col-md-1" style="text-align: center;">
+          <div class="col-md-1 arrowPosition">
             <!-- controls -->
             <button class="control " (click)="onPreviousClick()">       
               <span class="arrow left"></span>
@@ -194,7 +195,7 @@
              </div> 
           </div>
           </div>      
-             <div class="col-md-1" style="text-align: center">
+             <div class="col-md-1 arrowPosition" >
               <button class="control  "  (click)="onNextClick()">         
                 <span class="arrow right"></span>
               </button>

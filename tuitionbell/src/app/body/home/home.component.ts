@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MyAnimation } from '../../util/animationUtil'
+import { MyAnimation } from '../../util/animationUtil';
 // import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { ContentReader } from '../../util/ContentReader';
 
 @Component({
   selector: 'app-home',
@@ -10,55 +11,27 @@ import { MyAnimation } from '../../util/animationUtil'
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private  _contentReader : ContentReader) { }
 
   ngOnInit(): void {
-  }
+  }  
   
-  // Services ts
    // Services
    show = false; 
    public selectedIndex = 0;
-   public serviceData=[
-     {
-       title:"Customized Educutional Packs",
-       data:"",
-       img:'../../../assets/Images/man.jpg'
-       //'../../../assets/Images/man.jpg'
-     },
-     {
-       title:"Tutoring Solutions",
-       data:"",
-       img:"../../../assets/Images/people.jpg"
-     },
-     {
-       title:"Oportutinities for tutors in the City",
-       data:"",
-       img:"../../../assets/Images/computer.jpg"
-     },
-     {
-      title:"Open Question Posting Fourm",
-      data:"",
-      img:"../../../assets/Images/people.jpg"
-    },
-    {
-      title:"Live tracking of Educational Growth",
-      data:"",
-      img:"../../../assets/Images/computer.jpg"
-    }
- ]
- 
-  showTab(n,data){
-   this.show = false;
-   this.selectedIndex = n;
-   this.show = true;
- }
- get stateName(){
-   return this.show ? 'show' : 'hide'
- }
+   public serviceData = this._contentReader.getserviceData();
+
+   showTab(index,data){
+    this.show = false;
+    this.selectedIndex = index;
+    this.show = true;
+  }
+   get stateName(){
+    return this.show ? 'show' : 'hide'
+  }
  
 
-// Meet the team
+//  the team
 slidesStore=[
   [
     {'header':'vedavyas','position':'CFO','discription':'Bussiness','img':'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRK75yOImoF-jRTnx-OjQVl7By4alsTf11vg&usqp=CAU'},
@@ -90,6 +63,7 @@ onNextClick() {
   if(this.num<this.slidesStore.length-1){
  this.num++;
  this.subslide=this.slidesStore[this.num];
+
 }}
   
 //contact Us

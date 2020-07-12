@@ -8,7 +8,9 @@
   text-align: center;
   }
   
-
+.center{
+   justify-content: center;
+}
 
 .container-fluid{
     padding-right: 0px !important;
@@ -18,22 +20,6 @@
 .no-border{
   border: 0px;
 }
-// .row {
-//   margin-right: 0px !important;
-//   margin-left: 0px !important;
-// }
-// Home CSS
-// .container {
-//   // top: 55%;
-//  // max-width: 650px;
-//   //left: 53%;
-//   //transform: translate(-50%, -50%);
-// // display: grid;
-
-//  //justify-content: center;
-// // opacity: 0.4;
-// // background-color: white;
-// }
 
 // h1 {
 //   display: block;
@@ -72,7 +58,7 @@
 
 
 
-
+// Home CSS
 
 .layer {
   background:#1c416a9e; // #1c416a;
@@ -95,7 +81,8 @@
   transform-style: preserve-3d;
 }
 .btn-primary{
-  background-color: #c8dd82 !important; /* Green */
+  // background-color: #fb632b !important;
+   background-color: #c8dd82 !important; /* Green */
   border: none;
   color: white;
   padding: 10px 40px;
@@ -104,39 +91,28 @@
   display: inline-block;
   font-size: 16px;
 }
-.banner{
-  
-background: url(../../../assets/Images/booksIn.jpg) no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-height: 100vh;
-// background-color: rgb(151, 148, 148);
-// background-blend-mode: difference;
-width: auto;
-//background-opacity: 0.5;
-//-moz-backface-visibility: hidden;
-//background-color: transparent;
+.banner{  
+  background: url(../../../assets/Images/booksIn.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  // background-color: rgb(151, 148, 148);
+  // background-blend-mode: difference;
+  width: auto;
+  //background-opacity: 0.5;
+  //-moz-backface-visibility: hidden;
+  //background-color: transparent;
 }
 
-// .banner::before{
-//   width: auto;
-//   height: 100vh;
-//   background-color: linear-gradient(rgb(114, 112, 112),rgb(53, 51, 51));
-//   z-index: -1;
-//   position: absolute;
-//   content: '';
-
-// }
-
-//Serices CSS
 //Serices CSS
 .service{
   cursor: pointer;
 }
 .activeService{
-  background-color: #c8dd82;
+  // background-color: #fb632b;
+   background-color:#c8dd82;
   border-radius: 5px;
 }
 .active{ 
@@ -157,7 +133,6 @@ width: auto;
   0% {opacity: 0.75;}
   100% {opacity: 1;}
 }
-
 .fadeIn {
   // -webkit-animation-name: fadeIn;
   // animation-name: fadeIn;
@@ -187,8 +162,6 @@ background-size: cover;
 height: 100vh;
 width: auto;
 }
-
-
 .template_faq {
   background: #edf3fe none repeat scroll 0 0;
 }
@@ -223,6 +196,7 @@ width: auto;
 }
 #accordion .panel-title a.collapsed {
   background:#c8dd82 none repeat scroll 0 0;
+  // background:#fb632b none repeat scroll 0 0;
   border: 1px solid #ddd;
   color: #333;
 }
@@ -261,6 +235,7 @@ width: auto;
   border-left: 1px dashed #8c8c8c;
   padding-left: 25px;
 }
+
 // The team CSS
 .arrowPosition{
   text-align: center;
@@ -271,11 +246,9 @@ width: auto;
 	width: 100%;
 	padding: 2em;
 }
-
  :host {
 	flex: 1;
 }
-
 .carousel {
 	position: relative;
 	height: 100%;
@@ -283,7 +256,6 @@ width: auto;
 	overflow: hidden;
 	border-radius: 0.5em;
 }
-
 .slide {
 	position: absolute;
 	top: 0;
@@ -294,11 +266,9 @@ width: auto;
 	transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
 	border-radius: 0.5em;
 }
-
 .slide:hover {
 	transform: scale(1.025);
 }
-
 .control {
 	border: none;
 	background-color: transparent;
@@ -325,18 +295,14 @@ mag:focus {
 
 
 /* Position the buttons */
-
 .next {
 	right: 0;
 }
-
 .prev {
 	left: 0;
 }
 
-
 /* style the arrows */
-
 .arrow {
 	display: block;
 	border-left: 0.1em solid black;
@@ -344,15 +310,12 @@ mag:focus {
 	width: 0.4em;
 	height: 0.4em;
 }
-
 .left {
 	transform: rotate(45deg);
 }
-
 .right {
 	transform: rotate(225deg);
 }
-
 .img-carousel {
 	max-width: 50px;
 	display: block;
@@ -427,49 +390,18 @@ outline: none !important;
   background-image: url(../../../assets/Images/computer.jpg);
 }
 
-/// OWL CARAOUSL
-// #owl-demo .item{
-//   background: #3fbf79;
-//   padding: 30px 0px;
-//   margin: 10px;
-//   color: #FFF;
-//   -webkit-border-radius: 3px;
-//   -moz-border-radius: 3px;
-//   border-radius: 3px;
-//   text-align: center;
-// }
-// .customNavigation{
-//   text-align: center;
-// }
-// //use styles below to disable ugly selection
-// .customNavigation a{
-//   -webkit-user-select: none;
-//   -khtml-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-//   user-select: none;
-//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-// }
-
-
-.form-row {
-  // margin-bottom: 17px;
-  font-size: 17px;
-  letter-spacing: 0;
-  // border: #93a35d 1px solid;
-  // color: #93a35d;
-}
-.center{
-  justify-content: center;
-}
+// Contact Us
 .form-row>.col, .form-row>[class*=col-] {
   padding-right: 5px;
   padding-left: 5px;
-  border:grey 1px solid !important;
+  border-top: none ;
+  border-left: none;
+  border-right: none;
+  border-bottom:grey 1px solid !important;
   color: #1c416a;
   // box-shadow: #1c416a6e 2px 2px;
-
 }
+
 .send{
   // border: #1c416a 1px solid ;
   color: #1c416a;

@@ -4,53 +4,25 @@
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     </head>
 
-<section id="home" >
-  <div class="container-fluid">
-  <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
-      <div class="carousel-inner text-center">
-          <div class="carousel-item active">
-            <div class="layer"></div>
-              <img src="../../../assets/Images/booksIn.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h1> Learn Better | Learn Smarter </h1>
-                <p>Achive academic excellence with our superior educational packs, experienced and verified Tutors</p>
-                <p>and free doubt solving forum</p><br><br>
-                <!-- <button type="button" class="btn btn-outline-light btn-lg active" data-toggle="modal" data-target="#exampleModal">
-                  Join Us
-                </button> -->
-              </div>
-          </div>
-          <div class="carousel-item">
-            <div class="layer"></div>
-            <img src="../../../assets/Images/study.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2>STUDY</h2>
-              <p>Learn anything at anytime!</p>
-              <p>We help you find the tuter you want at the fingertip. Anytime, Anywhere!</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="layer"></div>
-            <img src="../../../assets/Images/teach.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2>TEACH</h2>
-              <p>We help you Teach and Earn money as per your experties.</p>
-            </div>  
-          </div>
-          <div class="carousel-item">
-            <div class="layer"></div>
-            <img src="../../../assets/Images/study.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Assignments</h2>
-              <p>Facing Difficulty in acadamic projects?</p>
-              <p>Post the kind of project you need help with, and we will get you the best in the field, to help you!</p>
-            </div>  
-          </div>
+  <section id="home" >
+    <div class="container-fluid">
+    <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item" [ngClass]="{active:isFirst}" *ngFor="let dataS of homeData;
+          index as i;first as isFirst">
+              <div class="layer"></div>
+                <img src={{dataS.img}} class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>{{dataS.title}}</h1>
+                  <p>{{dataS.data1}}</p>
+                  <p>{{dataS.data2}}</p><br><br>
+                </div>
+            </div> 
+        </div>
       </div>
     </div>
-  </div>
   </section>  
-
+  
 <section id="about-us">
     <br><br>
   <div class="container card no-border">

@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }  
+
+   // Home Carousel
+   public homeData = this._contentReader.getHomeData();
   
    // Services
    

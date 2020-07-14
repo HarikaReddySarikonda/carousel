@@ -17,23 +17,17 @@ export class HomeComponent implements OnInit {
   }  
   
    // Services
-   show = false; 
+   
    public selectedIndex = 0;
    public serviceData = this._contentReader.getserviceData();
-
-   showTab(index,data){
-    this.show = false;
-    this.selectedIndex = index;
-    this.show = true;
+   showTab(index,data){ 
+    this.selectedIndex = index; 
   }
-   get stateName(){
-    return this.show ? 'show' : 'hide'
-  }
+  
  
 
 //  the team
 slidesStore=this._contentReader.getTeamData();;
-
 num= 0;
 subslide=this.slidesStore[this.num];
 
@@ -47,7 +41,6 @@ onNextClick() {
   if(this.num<this.slidesStore.length-1){
  this.num++;
  this.subslide=this.slidesStore[this.num];
-
 }}
   
 //contact Us

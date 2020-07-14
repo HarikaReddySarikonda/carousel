@@ -87,29 +87,29 @@
         </div>
       </div>
         <div  class="row card-text" >
-          <div class="container " >
-              <div class="row"> 
-                  <div class="col-md-6">
-                      <ul>
-                          <li class="row"  *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
-                            <div class="col-12" [ngClass]="{'activeService': selectedIndex==i }">
-                              <div class="card service no-border" style="background-color: inherit;">
-                                <div class="card-body" style="background-color: inherit;">
-                                    <h5 class="card-title">{{dataS.title}}</h5>
-                                    <p class="card-text">{{dataS.data}}</p>
-                                </div>
+          <div class="container" >
+            <div class="row"> 
+                <div class="col-md-6">
+                    <ul>
+                        <li class="row"  *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)" >
+                          <div class="col-12" [ngClass]="{'activeService': selectedIndex==i }">
+                            <div class="card service no-border" style="background-color: inherit;">
+                              <div class="card-body" style="background-color: inherit;">
+                                  <h5 class="card-title">{{dataS.title}}</h5>
+                                  <p class="card-text">{{dataS.data}}</p>
                               </div>
-                            </div>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="row" *ngFor="let dataS of serviceData, let i = index">
-                          <img src={{dataS.img}} [@myAni]="stateName"  [hidden]="selectedIndex!=i" style="height: 100%; width: 100%;" >
-                      </div>
-                  </div> 
-              </div>
-          </div>
+                            </div> 
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div *ngFor="let dataS of serviceData, let i = index">
+                        <img src={{dataS.img}} @myAni *ngIf="i == selectedIndex" class="slide" style="height: 100%; width: 100%;">
+                    </div>
+                </div> 
+            </div>        
+          </div>        
         </div>
       </div>
     </div>

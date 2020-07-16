@@ -15,80 +15,74 @@ export class HeaderComponent implements OnInit {
     var x = document.getElementById("navbarSupportedContent");
     if(x.style.display == "none") x.style.display='block';
   }
+  //navigation
+  
 
-    toHome(){
-    document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-    var element=document.getElementsByClassName('nav-link');
-   for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
-      var element=document.getElementsByClassName("nav-link");
-      element[y].classList.remove('highlight');
-     }
-     element[0].classList.add('highlight');
-     this.bgColor = "";
-     var x = document.getElementById("navbarSupportedContent");
-     x.style.display = "none";
+
+  public currentActive = 1;
+  public homeOffset: Number = null;
+  public aboutusOffset: Number = null;
+  public servicesOffset: Number = null;
+  public aboutteamOffset: Number = null;
+  public faqOffset: Number = null;
+  public contactusOffset: Number = null;
+  public navbarheight;
+  comVar;
+
+
+  ngAfterViewChecked() {
+    this.homeOffset = document.getElementById("home").offsetTop;
+    this.aboutusOffset = document.getElementById("about-us").offsetTop;
+    this.servicesOffset = document.getElementById("services").offsetTop;
+    this.aboutteamOffset = document.getElementById("about-team").offsetTop;
+    this.faqOffset = document.getElementById("faq").offsetTop;
+    this.contactusOffset = document.getElementById("contact-us").offsetTop;
+    this.aboutusOffset = document.getElementById("about-us").offsetTop;
+    this.navbarheight = document.getElementById("navbarheight").offsetHeight;
+
+
   }
-  toAboutus(){
-    document.getElementById("about-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-    var element=document.getElementsByClassName('nav-link');
-    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
-      var element=document.getElementsByClassName("nav-link");
-      element[y].classList.remove('highlight');
-     }
-     element[1].classList.add('highlight');
-     this.bgColor = "";
-     var x = document.getElementById("navbarSupportedContent");
-     x.style.display = "none";
-    }
-  toServices(){
-    document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-    var element=document.getElementsByClassName('nav-link');
-    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
-      var element=document.getElementsByClassName("nav-link");
-      element[y].classList.remove('highlight');
-     }
-     element[2].classList.add('highlight');
-     this.bgColor = "";
-     var x = document.getElementById("navbarSupportedContent");
-     x.style.display = "none";
+  scrollToElement(target){
+   // alert(target)
+    document.getElementById(target).scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"});
+   // alert(this.currentActive);
   }
-  toContactUs(){
-    document.getElementById("contact-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-    var element=document.getElementsByClassName('nav-link');
-    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
-      var element=document.getElementsByClassName("nav-link");
-      element[y].classList.remove('highlight');
-     }
+  @HostListener('window:scroll', ['$event'])
+checkOffsetTop() {
+  console.log(window.pageYOffset); // this will console log our scroll position
+  console.log(window.pageYOffset +"+ "+this.navbarheight);
+  console.log( window.pageYOffset +this.navbarheight);
+ // console.log("this.homeOffset"+this.homeOffset);
+ //// console.log("aboutusOffset "+this.aboutusOffset);
+ // console.log("this.servicesOffset"+this.servicesOffset);
+ // console.log("this.aboutteamOffset"+this.aboutteamOffset);
+  this.navbarheight = parseInt(this.navbarheight);
+  this.comVar =  window.pageYOffset + this.navbarheight;
+
+
+  if (this.comVar >= this.homeOffset && this.comVar < this.aboutusOffset) {
+    this.currentActive = 1;
+  } else if (this.comVar >= this.aboutusOffset && this.comVar < this.servicesOffset) {
+    this.currentActive = 2;
+  } else if (this.comVar >= this.servicesOffset && this.comVar < this.aboutteamOffset) {
+    this.currentActive = 3;
+  } else if (this.comVar >= this.aboutteamOffset && this.comVar < this.faqOffset) {
+    this.currentActive = 4;
+  } else if (this.comVar >= this.faqOffset && this.comVar < this.contactusOffset){
+    this.currentActive = 5;
+  } else if (this.comVar >= this.contactusOffset){
+    this.currentActive = 6;
+  } else { this.currentActive = 0; }
+//alert(document.getElementById("home").offsetTop+"gggg"+document.getElementById("about-us").offsetTop);
+//alert(this.homeOffset+"ggfhg"+this.aboutusOffset);
+// alert(this.homeOffset);
+//alert(this.homeElement.nativeElement.offsetTop+"hb");
+//alert(document.getElementById("harika").offsetTop);
+}
+   
     
-    element[5].classList.add('highlight');
-    this.bgColor = "";
-    var x = document.getElementById("navbarSupportedContent");
-    x.style.display = "none";
-  }
-  toFaq(){
-    document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-    var element=document.getElementsByClassName('nav-link');
-    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
-      var element=document.getElementsByClassName("nav-link");
-      element[y].classList.remove('highlight');
-     }
-     element[4].classList.add('highlight');
-     this.bgColor = "";
-     var x = document.getElementById("navbarSupportedContent");
-     x.style.display = "none";
-  }
-  toTheTeam(){
-    document.getElementById("about-team").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-    var element=document.getElementsByClassName('nav-link');
-    for(var y=0;y< document.getElementsByClassName("nav-link").length;y++){
-      var element=document.getElementsByClassName("nav-link");
-      element[y].classList.remove('highlight');
-     }
-     element[3].classList.add('highlight');
-     this.bgColor = "";
-     var x = document.getElementById("navbarSupportedContent");
-     x.style.display = "none";
-  }
+    
+ 
   toElem(elem){
 console.log(elem);
 
@@ -119,7 +113,8 @@ console.log(elem);
     }
   }
   ngOnInit(): void {
-    console.log("In Header component")
+    console.log("In Header component");
+    console.log(window.pageYOffset);
   }
 
 }

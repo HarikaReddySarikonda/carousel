@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener} from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +8,15 @@ import { Component, OnInit, HostListener} from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   bgLight = false;
-  bgColor : string = '';
+  bgColor: string = '';
 
-  toggleClick(){
-    this.bgColor="rgb(2, 46, 82)";
+  toggleClick() {
+    this.bgColor = "rgb(2, 46, 82)";
     var x = document.getElementById("navbarSupportedContent");
-    if(x.style.display == "none") x.style.display='block';
+    if (x.style.display == "none") x.style.display = 'block';
   }
   //navigation
-  
+
 
 
   public currentActive = 1;
@@ -42,49 +42,49 @@ export class HeaderComponent implements OnInit {
 
 
   }
-  scrollToElement(target){
-   // alert(target)
-    document.getElementById(target).scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"});
-   // alert(this.currentActive);
+  scrollToElement(target) {
+    // alert(target)
+    document.getElementById(target).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    // alert(this.currentActive);
   }
   @HostListener('window:scroll', ['$event'])
-checkOffsetTop() {
-  console.log(window.pageYOffset); // this will console log our scroll position
-  console.log(window.pageYOffset +"+ "+this.navbarheight);
-  console.log( window.pageYOffset +this.navbarheight);
- // console.log("this.homeOffset"+this.homeOffset);
- //// console.log("aboutusOffset "+this.aboutusOffset);
- // console.log("this.servicesOffset"+this.servicesOffset);
- // console.log("this.aboutteamOffset"+this.aboutteamOffset);
-  this.navbarheight = parseInt(this.navbarheight);
-  this.comVar =  window.pageYOffset + this.navbarheight;
+  checkOffsetTop() {
+    console.log(window.pageYOffset); // this will console log our scroll position
+    console.log(window.pageYOffset + "+ " + this.navbarheight);
+    console.log(window.pageYOffset + this.navbarheight);
+    // console.log("this.homeOffset"+this.homeOffset);
+    //// console.log("aboutusOffset "+this.aboutusOffset);
+    // console.log("this.servicesOffset"+this.servicesOffset);
+    // console.log("this.aboutteamOffset"+this.aboutteamOffset);
+    this.navbarheight = parseInt(this.navbarheight);
+    this.comVar = window.pageYOffset + this.navbarheight;
 
 
-  if (this.comVar >= this.homeOffset && this.comVar < this.aboutusOffset) {
-    this.currentActive = 1;
-  } else if (this.comVar >= this.aboutusOffset && this.comVar < this.servicesOffset) {
-    this.currentActive = 2;
-  } else if (this.comVar >= this.servicesOffset && this.comVar < this.aboutteamOffset) {
-    this.currentActive = 3;
-  } else if (this.comVar >= this.aboutteamOffset && this.comVar < this.faqOffset) {
-    this.currentActive = 4;
-  } else if (this.comVar >= this.faqOffset && this.comVar < this.contactusOffset){
-    this.currentActive = 5;
-  } else if (this.comVar >= this.contactusOffset){
-    this.currentActive = 6;
-  } else { this.currentActive = 0; }
-//alert(document.getElementById("home").offsetTop+"gggg"+document.getElementById("about-us").offsetTop);
-//alert(this.homeOffset+"ggfhg"+this.aboutusOffset);
-// alert(this.homeOffset);
-//alert(this.homeElement.nativeElement.offsetTop+"hb");
-//alert(document.getElementById("harika").offsetTop);
-}
-   
-    
-    
- 
-  toElem(elem){
-console.log(elem);
+    if (this.comVar >= this.homeOffset && this.comVar < this.aboutusOffset) {
+      this.currentActive = 1;
+    } else if (this.comVar >= this.aboutusOffset && this.comVar < this.servicesOffset) {
+      this.currentActive = 2;
+    } else if (this.comVar >= this.servicesOffset && this.comVar < this.aboutteamOffset) {
+      this.currentActive = 3;
+    } else if (this.comVar >= this.aboutteamOffset && this.comVar < this.faqOffset) {
+      this.currentActive = 4;
+    } else if (this.comVar >= this.faqOffset && this.comVar < this.contactusOffset) {
+      this.currentActive = 5;
+    } else if (this.comVar >= this.contactusOffset) {
+      this.currentActive = 6;
+    } else { this.currentActive = 0; }
+    //alert(document.getElementById("home").offsetTop+"gggg"+document.getElementById("about-us").offsetTop);
+    //alert(this.homeOffset+"ggfhg"+this.aboutusOffset);
+    // alert(this.homeOffset);
+    //alert(this.homeElement.nativeElement.offsetTop+"hb");
+    //alert(document.getElementById("harika").offsetTop);
+  }
+
+
+
+
+  toElem(elem) {
+    console.log(elem);
 
   }
   // toHome(){
@@ -104,11 +104,11 @@ console.log(elem);
   // }
 
   constructor() { }
-  @HostListener('document:scroll') scrollFunction(){
-    if(document.body.scrollTop > 0 || document.documentElement.scrollTop>0){
+  @HostListener('document:scroll') scrollFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       this.bgLight = true
     }
-    else{
+    else {
       this.bgLight = false
     }
   }

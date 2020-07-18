@@ -1,32 +1,36 @@
-<div class="container"  >
-    <div class="row"  >
-        <nav id="navbarheight" style="height: 50px;" [class.bg-light]="bgLight" class="navbar navbar-expand-lg navbar-light fixed-top">
-          <a class="navbar-brand" href="#">TuitionBell</a>
-          <button class="navbar-toggler" (click)="toggleClick()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" [ngStyle]="{'background-color': bgColor}" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item" (click)="scrollToElement('home')">
-                <a  [ngClass]="{'highlight': currentActive === 1}" class="nav-link">Home <span class="sr-only">(current)</span></a>
-              </li> 
-              <li class="nav-item" (click)="scrollToElement('about-us')">
-                <a [ngClass]="{'highlight': currentActive === 2}" class="nav-link">About Us</a>
-              </li>  
-              <li class="nav-item" (click)="scrollToElement('services')" class="nav-link">
-                <a [ngClass]="{'highlight': currentActive === 3}">Services</a>
-              </li>
-              <li class="nav-item" (click)="scrollToElement('about-team')" class="nav-link">
-                <a [ngClass]="{'highlight': currentActive === 4}">The Team</a>
-              </li>              
-              <li class="nav-item" (click)="scrollToElement('faq')" class="nav-link">
-                <a [ngClass]="{'highlight': currentActive === 5}" >FAQ</a>
-              </li>
-              <li class="nav-item" (click)="scrollToElement('contact-us')" class="nav-link">
-                <a [ngClass]="{'highlight': currentActive === 6}" >Contact Us</a>
-              </li>
-              <!-- <li class="nav-item dropdown">
+<div class="container">
+  <div class="row">
+    <nav id="navbarheight" style="height: 50px;" [class.bg-light]="bgLight"
+      class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="#">TuitionBell</a>
+      <button class="navbar-toggler" (click)="toggleClick()" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" [ngStyle]="{'background-color': bgColor}" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" (click)="scrollToElement('home')">
+            <a [ngClass]="{'highlight': currentActive === 1}" class="nav-link">Home <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" (click)="scrollToElement('about-us')">
+            <a [ngClass]="{'highlight': currentActive === 2}" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item" (click)="scrollToElement('services')" class="nav-link">
+            <a [ngClass]="{'highlight': currentActive === 3}">Services</a>
+          </li>
+          <li class="nav-item" (click)="scrollToElement('about-team')" class="nav-link">
+            <a [ngClass]="{'highlight': currentActive === 4}">The Team</a>
+          </li>
+          <li class="nav-item" (click)="scrollToElement('faq')" class="nav-link">
+            <a [ngClass]="{'highlight': currentActive === 5}">FAQ</a>
+          </li>
+          <li class="nav-item" (click)="scrollToElement('contact-us')" class="nav-link">
+            <a [ngClass]="{'highlight': currentActive === 6}">Contact Us</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Pricing
                 </a>
@@ -37,30 +41,31 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li> -->
-              <!-- <li class="nav-item">
+          <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Help</a>
               </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-            </ul>
-            <div class="inputWithIcon">
-              <input type="text" placeholder="learn something new!!">
-              <i class="fa fa-search fa-lg fa-fw" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
-            </div>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
-              Login/Register
-            </button>
-          </div>
-        </nav>
-    </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>
+        <div class="inputWithIcon">
+          <input type="text" placeholder="learn something new!!">
+          <i class="fa fa-search fa-lg fa-fw" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+          Login/Register
+        </button>
+      </div>
+    </nav>
   </div>
+</div>
 
 
 
 <!-- Modal -->
-<div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -73,11 +78,8 @@
         <p>We are still working on the page.. Will get back soon..</p>
       </div>
       <div class="modal-footer">
-        <button type="button"  class="btn btn-primary" data-dismiss="modal">Ok</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
 </div>
-
-
-  

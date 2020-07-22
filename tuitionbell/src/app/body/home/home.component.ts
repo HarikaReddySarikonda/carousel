@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyAnimation } from '../../util/animationUtil';
+import { howItWorksAni } from '../../util/animationUtil';
+
 // import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { ContentReader } from '../../util/ContentReader';
 import { NgForm } from '@angular/forms';
@@ -8,7 +10,7 @@ import { NgForm } from '@angular/forms';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [MyAnimation]
+  animations: [MyAnimation,howItWorksAni]
 })
 export class HomeComponent implements OnInit {
 
@@ -19,6 +21,18 @@ export class HomeComponent implements OnInit {
 
   // Home Carousel
   public homeData = this._contentReader.getHomeData();
+
+    //menu goes away on click
+    gomenu(){
+      var a = document.getElementById("menuButton").getAttribute("aria-expanded");
+      if(a == 'true'){
+       document.getElementById("menuButton").setAttribute("aria-expanded","false");
+       document.getElementById("menuButton").classList.add("collapsed");
+       document.getElementById("navbarSupportedContent").classList.remove("show");
+      // console.log(document.getElementById("menuButton"));
+      // console.log(document.getElementById("navbarSupportedContent"));
+      }
+     }
 
   // Services
 
@@ -62,4 +76,31 @@ export class HomeComponent implements OnInit {
   //   //     console.log(error.text);
   //   //   });
   // }
+
+  // how it works
+  tutor=true;
+  student=true;
+  positionStu="center";
+  arrow=false;
+  step=false;
+  positiontutor="center";
+
+
+  showStudent(){
+    this.tutor=false;
+    this.positionStu="left";
+    this.arrow=true;
+    this.step=true;
+
+  }
+
+  showtutor(){
+   this.student=false;
+    this.positiontutor="left";
+    this.arrow=true;
+    this.step=true;
+
+
+  }
+
 }

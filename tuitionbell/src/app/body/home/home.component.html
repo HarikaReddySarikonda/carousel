@@ -3,7 +3,7 @@
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 </head>
-
+<div (click)="gomenu()">
 <section id="home">
   <div class="container-fluid">
     <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
@@ -92,47 +92,65 @@
     </div>
   </div>
 </section>
-<!-- 
+<!--  
 <section id="how-it-works">
-  <br><br>
-<div class="container card no-border">
-  <div class="card-body" >
-    <div class="row card-title">
-      <div  class="col-12">
-        <h2 class="home-title" >! How It Works ! </h2>
-      </div>
+  <div class="container" style="border: solid 5px;">
+          <div  class="col-12">
+            <h2 class="home-title" >! How It Works ! </h2>
+            </div>
+    
+    <div class="container">
+    <div class="row">
+    
+      <div class="col-md-1">
+        <img (click)="showStudent()" [@studentAni]="positionStu" *ngIf="student==true" style="height: 100px; width: 100px;" src="https://cdn3.iconfinder.com/data/icons/ringtone-music-instruments/512/letter-s-key-keyboard-512.png">
     </div>
-  </div>
-    <div class="row" >
-      <div class="col-6" style="align-items: center; align-content: center; background-color: #f9cde4;">
-        <div style="align-content: center;" style="background-color: inherit;">
-          <h4>Tutor's flow</h4>
-          <br> • Login
-          <br> • Complete the profile and upload certificates(Restrict the
-          <br> size of each file to maximum 500KB)
-          <br> • Verification within 24 hrs
-          <br> • Access to Level 1 evaluation exam
-          <br> • Creation of virtual ID cards and start tutoring
-          <br> 
-        </div>
-      </div>
-      <div class="col-6" style="align-items: center; align-content: center; background-color: #f9cde4;">
-        <div style="align-content: center;" style="background-color: inherit;">
-          <h4>Student's flow</h4>
-          <br> • Login
-          <br> • Complete profile and submit the required details
-          <br> • Search for tutor
-          <br> • Select the tutor based on availability
-          <br> • Book the tutor based on packs (Pay and go) or
-          <br> (subscription model)
-          <br> • Demo class for subscription pack
-          <br> • Continue with tutor only if you like
-          <br> Else request for money back
-          <br> 
-        </div>
-      </div>
+    <div class="col-md-1">
+      
+    <img @arrow1 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
     </div>
-  </div>
+    <div class="col-md-1">
+    
+    <img @step1 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px" src="https://img2.pngio.com/usmle-step-1-symbol-usmle-step-3-png-768x768px-usmle-step-1-usmle-step-1-png-820_768.jpg">
+    </div>
+    <div class="col-md-1">
+    <img @arrow2 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
+    
+    </div>
+    <div class="col-md-1">
+    
+    <img @step2 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px" src="https://f0.pngfuel.com/png/425/749/step-2-logo-png-clip-art-thumbnail.png">
+    </div>
+    <div class="col-md-1">
+    
+    <img @arrow3 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
+    
+    </div>
+    <div class="col-md-1">
+    <img @step3 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px" src="https://p7.hiclipart.com/preview/723/583/816/usmle-step-1-computer-icons-usmle-step-3-symbol-symbol.jpg" >
+    
+    </div>
+    <div class="col-md-1">
+    <img @arrow4 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
+    </div>
+    <div class="col-md-1">
+    
+    <img @step4 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px"src="https://lh3.googleusercontent.com/proxy/ZZ0tIZNDUC-rNeiz9Bha7lMNg5_AmnJ9bI7BSboMgF_Qp1wfgPCzyT6GXBfKtOJWQp1CPTNCcv-RLi-HoOH4UZzTZ3yBfhSOdRZys9MRFKXQfuF7DVI">
+    
+    </div>
+    <div class="col-md-1">
+    <img @arrow5 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
+    
+    </div>
+    <div class="col-md-1">
+    <img @step5 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px"src="https://lh3.googleusercontent.com/proxy/1W5tfLiGRAUBklzHwH6on7pIvPhPe8opPPJtUy9Iy8fUWnNsC2Km1PW4YKL3De4dRfIACVlTvKI0g_R26vO23qsBRLfeFZM0xWQAL-LzWTvvbLUwFpU">
+    
+    </div>
+    <div class="col-md-1">
+      <img [@tutorAni]="positiontutor" (click)="showtutor()"  *ngIf="tutor==true" style="height: 100px; width: 100px;" src="https://cdn3.iconfinder.com/data/icons/ringtone-music-instruments/512/letter-t-key-keyboard-512.png">
+    </div></div></div>
+    </div> 
+    
 </section> -->
 
 <section id="about-team">
@@ -366,32 +384,50 @@
         <img src="../../../assets/Images/desk-office-pen-ruler-2097.jpg" style="height: inherit; width: inherit;">
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <form method="post" name="cform" id="cform" style="height: inherit; width: inherit; padding-top: 5%;">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <br>
           <br>
           <div class="form-row clearfix">
-            <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal"
-              placeholder="Your Name">
+            <input name="name" id="name" type="text" required placeholder="Your Name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
           </div>
           <br>
           <div class="form-row clearfix">
-            <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 normal"
-              placeholder="Email address">
+            <input name="email"id="email" type="email" required placeholder="Email address" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
           </div>
           <br>
           <div class="form-row clearfix">
-            <textarea name="comments" id="comments" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium"
-              placeholder="Your Comments"></textarea>
+            <textarea name="comments" id="comments" required placeholder="Your Comments" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" ngModel></textarea>
           </div>
           <br>
           <div class="text-center">
-            <div (click)="sendEmail($event)" class="btn btn-primary send">
-              Send
-            </div>
+            <button class="btn btn-primary send" data-toggle="modal" data-target="#contactUsModal">Send</button>
           </div>
-          <div id="simple-msg"></div>
         </form>
       </div>
     </div>
-
   </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel"
+  aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactUsModalLabel">Congratulations!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Your query is submitted successfully. We will get back to you soon..</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary send" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
+</div>

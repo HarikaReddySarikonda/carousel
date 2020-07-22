@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener,ElementRef,ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,11 @@ export class HeaderComponent implements OnInit {
 
   bgLight = false;
   bgColor: string = '';
+  @ViewChild('menubutton') menubuttonElement: ElementRef;
+  @ViewChild('menu') menuElement: ElementRef;
 
   toggleClick() {
     this.bgColor = "rgb(2, 46, 82)";
-    var x = document.getElementById("navbarSupportedContent");
-    if (x.style.display == "none") x.style.display = 'block';
   }
   //navigation
 
@@ -43,19 +43,10 @@ export class HeaderComponent implements OnInit {
 
   }
   scrollToElement(target) {
-    // alert(target)
     document.getElementById(target).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    // alert(this.currentActive);
   }
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    console.log(window.pageYOffset); // this will console log our scroll position
-    console.log(window.pageYOffset + "+ " + this.navbarheight);
-    console.log(window.pageYOffset + this.navbarheight);
-    // console.log("this.homeOffset"+this.homeOffset);
-    //// console.log("aboutusOffset "+this.aboutusOffset);
-    // console.log("this.servicesOffset"+this.servicesOffset);
-    // console.log("this.aboutteamOffset"+this.aboutteamOffset);
     this.navbarheight = parseInt(this.navbarheight);
     this.comVar = window.pageYOffset + this.navbarheight;
 
@@ -73,11 +64,13 @@ export class HeaderComponent implements OnInit {
     } else if (this.comVar >= this.contactusOffset) {
       this.currentActive = 6;
     } else { this.currentActive = 0; }
-    //alert(document.getElementById("home").offsetTop+"gggg"+document.getElementById("about-us").offsetTop);
-    //alert(this.homeOffset+"ggfhg"+this.aboutusOffset);
-    // alert(this.homeOffset);
-    //alert(this.homeElement.nativeElement.offsetTop+"hb");
-    //alert(document.getElementById("harika").offsetTop);
+    
+
+
+    this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
+    this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");
+    this.menubuttonElement.nativeElement.classList.add("collapsed");
+    this.menuElement.nativeElement.classList.remove("show");
   }
 
 
@@ -85,23 +78,8 @@ export class HeaderComponent implements OnInit {
 
   toElem(elem) {
     console.log(elem);
-
   }
-  // toHome(){
-  //   document.getElementById("home").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-  // }
-  // toAboutus(){
-  //   document.getElementById("about-us").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-  // }
-  // toServices(){
-  //   document.getElementById("services").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-  // }
-  // toContactUs(){
-  //   document.getElementById("contact").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-  // }
-  // toFaq(){
-  //   document.getElementById("faq").scrollIntoView({behavior:"smooth",  block: "start", inline: "nearest"})
-  // }
+  
 
   constructor() { }
   @HostListener('document:scroll') scrollFunction() {

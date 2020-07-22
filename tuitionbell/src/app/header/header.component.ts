@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
   public faqOffset: Number = null;
   public contactusOffset: Number = null;
   public navbarheight;
-  comVar;
+  public comVar;
 
 
   ngAfterViewChecked() {

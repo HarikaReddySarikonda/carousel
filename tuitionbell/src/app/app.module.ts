@@ -14,6 +14,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BlogsComponent } from './blogs/blogs.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    BlogsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

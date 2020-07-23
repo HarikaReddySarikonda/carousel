@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import services from '../../content/homePage/services.json';
 import team from '../../content/homePage/team.json';
 import home_data from '../../content/homePage/home-carousel.json';
+import faq from '../../content/homePage/faq.json'
 
 @Injectable({
   providedIn:'root'
@@ -21,4 +22,9 @@ export class ContentReader{
  getTeamData(){
   return team;
  }
+
+ getFaqData() {
+  return faq;
+ }
+
 }

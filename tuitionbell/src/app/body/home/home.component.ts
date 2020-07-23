@@ -46,6 +46,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  // faq
+
+  student_faq = this._contentReader.getFaqData()[0];
+  tutor_faq = this._contentReader.getFaqData()[1];
+  
+
   //contact Us
   sendEmail(e: Event) {
     console.log("email");

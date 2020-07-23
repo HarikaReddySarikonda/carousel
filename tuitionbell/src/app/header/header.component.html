@@ -3,32 +3,46 @@
     <nav id="navbarheight" style="height: 50px;" [class.bg-light]="bgLight"
       class="navbar navbar-expand-lg navbar-light fixed-top">
       <a class="navbar-brand" href="#">TuitionBell</a>
-      <button class="navbar-toggler" (click)="toggleClick()" type="button" data-toggle="collapse"
+      <button class="navbar-toggler" #menubutton id="menuButton" (click)="toggleClick()" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" [ngStyle]="{'background-color': bgColor}" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" #menu [ngStyle]="{'background-color': bgColor}" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" (click)="scrollToElement('home')">
-            <a [ngClass]="{'highlight': currentActive === 1}" class="nav-link">Home <span
+            <a routerLink ="/" routerLinkActive="router-link-active" [ngClass]="{'highlight': currentActive === 1}" class="nav-link">Home <span
                 class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item" (click)="scrollToElement('about-us')">
-            <a [ngClass]="{'highlight': currentActive === 2}" class="nav-link">About Us</a>
+            <a 
+            [routerLink]="['home']" routerLinkActive="router-link-active"
+            [ngClass]="{'highlight': currentActive === 2}" class="nav-link">About Us</a>
           </li>
-          <li class="nav-item" (click)="scrollToElement('services')" class="nav-link">
-            <a [ngClass]="{'highlight': currentActive === 3}">Services</a>
+          <li class="nav-item" (click)="scrollToElement('services')" >
+            <a 
+            [routerLink]="['home']" routerLinkActive="router-link-active"
+            [ngClass]="{'highlight': currentActive === 3}" class="nav-link">
+              Services
+            </a>
           </li>
-          <li class="nav-item" (click)="scrollToElement('about-team')" class="nav-link">
-            <a [ngClass]="{'highlight': currentActive === 4}">The Team</a>
+          <li class="nav-item" (click)="scrollToElement('about-team')" >
+            <a 
+            [routerLink]="['home']" routerLinkActive="router-link-active"
+            [ngClass]="{'highlight': currentActive === 4}" class="nav-link"> 
+              The Team
+            </a>
           </li>
-          <li class="nav-item" (click)="scrollToElement('faq')" class="nav-link">
-            <a [ngClass]="{'highlight': currentActive === 5}">FAQ</a>
+          <li class="nav-item" (click)="scrollToElement('faq')" >
+            <a 
+            [routerLink]="['home']" routerLinkActive="router-link-active"
+            [ngClass]="{'highlight': currentActive === 5}" class="nav-link" >FAQ</a>
           </li>
-          <li class="nav-item" (click)="scrollToElement('contact-us')" class="nav-link">
-            <a [ngClass]="{'highlight': currentActive === 6}">Contact Us</a>
+          <li class="nav-item" (click)="scrollToElement('contact-us')" >
+            <a 
+            [routerLink]="['home']" routerLinkActive="router-link-active"
+            [ngClass]="{'highlight': currentActive === 6}" class="nav-link" >Contact Us</a>
           </li>
           <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +59,7 @@
                 <a class="nav-link" href="#">Help</a>
               </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a  [routerLink]="['blog']" routerLinkActive="router-link-active" class="nav-link" [ngClass]="{'highlight': currentActive === 7}" >Blog</a>
           </li>
         </ul>
         <div class="inputWithIcon">

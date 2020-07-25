@@ -31,6 +31,7 @@ export class HeaderComponent implements OnInit {
 
 
   ngAfterViewChecked() {
+    if (document.getElementById("home")!=null) {
     this.homeOffset = document.getElementById("home").offsetTop;
     this.aboutusOffset = document.getElementById("about-us").offsetTop;
     this.servicesOffset = document.getElementById("services").offsetTop;
@@ -39,7 +40,7 @@ export class HeaderComponent implements OnInit {
     this.contactusOffset = document.getElementById("contact-us").offsetTop;
     this.aboutusOffset = document.getElementById("about-us").offsetTop;
     this.navbarheight = document.getElementById("navbarheight").offsetHeight;
-
+    }
 
   }
   scrollToElement(target) {
@@ -49,7 +50,7 @@ export class HeaderComponent implements OnInit {
   checkOffsetTop() {
     this.navbarheight = parseInt(this.navbarheight);
     this.comVar = window.pageYOffset + this.navbarheight;
-
+    if (document.getElementById("home")!=null) {
 
     if (this.comVar >= this.homeOffset && this.comVar < this.aboutusOffset) {
       this.currentActive = 1;
@@ -65,7 +66,7 @@ export class HeaderComponent implements OnInit {
       this.currentActive = 6;
     } else { this.currentActive = 0; }
     
-
+  }
 
     this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
     this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");

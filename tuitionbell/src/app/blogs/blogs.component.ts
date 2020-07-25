@@ -14,12 +14,7 @@ export class BlogsComponent implements OnInit {
     if(this.width <= 768){
         this.mobile=true; 
         console.log("mobile");
-    }else  if (this.width > 768 && this.width <= 992) {
-      this.tablet=true;
-     } else {
-      this.desktop=true;
-      console.log("Desktop");
-     }
+    }
      
   }
 
@@ -28,7 +23,6 @@ export class BlogsComponent implements OnInit {
 
   width = window.innerWidth;
   mobile=false;
-  tablet=false;
   desktop=false;
 
   // Blog Content

@@ -16,6 +16,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BlogsComponent } from './blogs/blogs.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BlogComponent } from './blogs/blog/blog.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     HomeComponent,
     BlogsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

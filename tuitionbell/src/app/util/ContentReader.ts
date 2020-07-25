@@ -5,6 +5,7 @@ import services from '../../content/homePage/services.json';
 import team from '../../content/homePage/team.json';
 import home_data from '../../content/homePage/home-carousel.json';
 import faq from '../../content/homePage/faq.json'
+import blog from '../../content/blogs/blog.json'
 
 @Injectable({
   providedIn:'root'
@@ -25,6 +26,10 @@ export class ContentReader{
 
  getFaqData() {
   return faq;
+ }
+
+ getBlogData() {
+   return blog;
  }
 
 }

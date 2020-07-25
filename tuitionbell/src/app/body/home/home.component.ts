@@ -65,7 +65,6 @@ export class HomeComponent implements OnInit {
 
   student_faq = this._contentReader.getFaqData()[0];
   tutor_faq = this._contentReader.getFaqData()[1];
-  
 
   //contact Us
   onSubmit(f: NgForm) {
@@ -97,7 +96,6 @@ export class HomeComponent implements OnInit {
     this.positionStu="left";
     this.arrow=true;
     this.step=true;
-
   }
 
   showtutor(){
@@ -105,8 +103,6 @@ export class HomeComponent implements OnInit {
     this.positiontutor="left";
     this.arrow=true;
     this.step=true;
-
-
   }
 
 }

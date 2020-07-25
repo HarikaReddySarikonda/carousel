@@ -1,0 +1,47 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+</head>
+
+<div class="headerBarBlog">
+</div>
+
+<div class="row card-text">
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <br>
+        <br>
+        <h5 class="product-head">Similar Blogs</h5>
+        <table class="table" cellspacing="0">
+          <tbody>
+            <tr *ngFor="let blog of blogs" [routerLink] ="['/blogs', blog.id]" (click)="updateId(blog.id)" class="tableRow">
+              <td>{{ blog.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>     
+  
+      <div class="col-sm-8">
+        <div class="product-detail">
+          <h3 class="product-head">{{blogs[id].name}}</h3>
+          <div class="view hm-zoom z-depth-2">
+            <img [src]="blogs[id].img" [alt]="blogs[id].name" width="100%" class="img-fluid rounded">
+          </div>
+          <table class="table" cellspacing="0">
+            <tbody>
+              <tr>
+                <th scope="row">Blog Name</th>
+                <td>{{blogs[id].name}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Blog Description</th>
+                <td class="description">{{blogs[id].description}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

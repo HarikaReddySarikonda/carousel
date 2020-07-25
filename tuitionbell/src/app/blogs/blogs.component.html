@@ -49,7 +49,7 @@
             </div>        
           </ng-template>  
           <ng-template #desktopVersion>
-            <div class="col-md-2 col-sm-12" *ngIf="index % 2 === 0">
+            <div class="col-md-2 col-sm-12" *ngIf="index % 2 === 1">
               <img class="card-img-top  imageStyle" src="{{ blog.img }}">
             </div>
             <div class="col-md-10 col-sm-12">
@@ -60,7 +60,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-2 col-sm-12" *ngIf="index % 2 === 1">
+            <div class="col-md-2 col-sm-12" *ngIf="index % 2 === 0">
               <img class="card-img-top  imageStyle" src="{{ blog.img }}">
             </div>
           </ng-template>

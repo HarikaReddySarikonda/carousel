@@ -40,7 +40,8 @@ export class HeaderComponent implements OnInit {
     this.contactusOffset = document.getElementById("contact-us").offsetTop;
     this.aboutusOffset = document.getElementById("about-us").offsetTop;
     this.navbarheight = document.getElementById("navbarheight").offsetHeight;
-    }
+    } 
+     if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 7; }
 
   }
   scrollToElement(target) {
@@ -67,6 +68,7 @@ export class HeaderComponent implements OnInit {
     } else { this.currentActive = 0; }
     
   }
+   if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 7; }
 
     this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
     this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");

@@ -17,11 +17,17 @@ export class HomeComponent implements OnInit {
   constructor(private _contentReader: ContentReader) { }
 
   ngOnInit(): void {
+   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+       this.mobile=true;
+  }
+  //if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+   // this.mobile=false;  
+  //}
   }
 
   // Home Carousel
   public homeData = this._contentReader.getHomeData();
-
+mobile=false;
     //menu goes away on click
     gomenu(){
       var a = document.getElementById("menuButton").getAttribute("aria-expanded");

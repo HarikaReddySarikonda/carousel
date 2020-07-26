@@ -2,19 +2,19 @@
   <div class="row">
     <nav id="navbarheight" style="height: 50px;" [class.bg-light]="bgLight"
       class="navbar navbar-expand-lg navbar-light fixed-top">
-      <a class="navbar-brand" href="#">TuitionBell</a>
+      <a class="navbar-brand" routerLink="/" (click)="scrollToElement('home')">TuitionBell</a>
       <button class="navbar-toggler" #menubutton id="menuButton" (click)="toggleClick()" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+  
       <div class="collapse navbar-collapse" #menu [ngStyle]="{'background-color': bgColor}" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item" (click)="scrollToElement('home')">
+          <!-- <li class="nav-item" (click)="scrollToElement('home')">
             <a routerLink ="/" routerLinkActive="router-link-active" [ngClass]="{'highlight': currentActive === 1}" class="nav-link">Home <span
                 class="sr-only">(current)</span></a>
-          </li>
+          </li> -->
           <li class="nav-item" (click)="scrollToElement('about-us')">
             <a 
             [routerLink]="['home']" routerLinkActive="router-link-active"
@@ -58,8 +58,9 @@
           <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Help</a>
               </li> -->
-          <li class="nav-item">
-            <a  [routerLink]="['blogs']" routerLinkActive="router-link-active" class="nav-link" [ngClass]="{'highlight': currentActive === 7}" >Blog</a>
+          <li class="nav-item" (click)="scrollToElement('blog-home')">
+            <a  [routerLink]="['blogs']" routerLinkActive="router-link-active" 
+             class="nav-link" [ngClass]="{'highlight': currentActive === 7}" >Blog</a>
           </li>
         </ul>
         <div class="inputWithIcon">

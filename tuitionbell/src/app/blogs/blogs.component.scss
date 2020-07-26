@@ -19,10 +19,12 @@
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
+
   .container-fluid {
     padding-right: 0px !important;
     padding-left: 0px !important;
   }
+  
   .home-title {
     font-size: 36px;
     padding-bottom: 45px;
@@ -30,22 +32,38 @@
     font-family: Candara;
     text-align: center;
   }
-  .no-border {
-    border: 0px;
+  
+  .cardTitle{
+    font-size: 15px;
   }
 
-  .cardstyle{
-    margin: 10px;
-  //  height: 20px;
-   // width: 10px;
-  }
-  .cardTitle{
-    font-size: 25px;
-  }
   .imageStyle{
     height: 100%;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
+
   .commonStyle{
     margin: 20px;
+  }
+
+  .read{
+    color: red;
+  }
+
+  .card-row{
+    margin-bottom: 10px;
+  }
+
+  .card-style{
+    margin: 10px;
+    outline: none;
+  }
+  
+  .leftpanel{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-style: italic;
   }

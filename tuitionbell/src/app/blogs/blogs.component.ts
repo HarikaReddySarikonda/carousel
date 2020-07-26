@@ -15,7 +15,10 @@ export class BlogsComponent implements OnInit {
         this.mobile=true; 
         console.log("mobile");
     }
-     
+
+    for (let i = 0; i < this.blogsContent.length; i++) {
+      this.blogs[i] = this.blogsContent[i].description.substring(0,450) + "..";      
+    }     
   }
 
   // Home Carousel
@@ -26,6 +29,6 @@ export class BlogsComponent implements OnInit {
   desktop=false;
 
   // Blog Content
-  blogs = this._contentReader.getBlogData();
-
+  blogsContent = this._contentReader.getBlogData();
+  blogs = [];
 }

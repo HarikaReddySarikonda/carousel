@@ -9,22 +9,24 @@
   <div class="container">
     <br>
     <div class="row">
-      <div class="col-sm-2">
-        <br>
-        <br>
-        <h5 class="product-head">Similar Blogs</h5>
+      <div class="col-sm-3">
+        <br><br><br><br>
+        <h5 class="similar-blog"> Similar Blogs </h5><br>
+
         <table class="table" cellspacing="0">
           <tbody>
-            <tr *ngFor="let blog of blogs" [routerLink] ="['/blogs', blog.id]" (click)="updateId(blog.id)" class="tableRow">
-              <td>{{ blog.name }}</td>
+            <tr *ngFor="let blog of blogs, let i = index" [routerLink] ="['/blogs', blog.id]" (click)="updateId(blog.id)" class="tableRow" (mouseover)="showTab(i)">
+              <td [ngClass]="{'selected': selectedIndex == i, 'active': id == i}">{{ blog.name }}</td>
             </tr>
           </tbody>
         </table>
-      </div>     
+      </div> 
+      <div class="col-sm-1">      
+      </div>    
   
       <div class="col-sm-8">
-        <div class="product-detail">
-          <h3 class="product-head">{{blogs[id].name}}</h3>
+        <div class="blog-detail">
+          <h3 class="blog-head">{{blogs[id].name}}</h3>
           <div class="view hm-zoom z-depth-2">
             <img [src]="blogs[id].img" [alt]="blogs[id].name" width="100%" class="img-fluid rounded">
           </div>

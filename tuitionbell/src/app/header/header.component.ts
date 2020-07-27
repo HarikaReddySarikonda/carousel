@@ -42,9 +42,11 @@ export class HeaderComponent implements OnInit {
     this.navbarheight = document.getElementById("navbarheight").offsetHeight;
     } 
      if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 7; }
+     else {this.currentActive = 1;}
 
   }
   scrollToElement(target) {
+  //  alert(target);
     document.getElementById(target).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
   @HostListener('window:scroll', ['$event'])

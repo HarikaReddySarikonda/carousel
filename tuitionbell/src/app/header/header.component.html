@@ -2,7 +2,11 @@
   <div class="row">
     <nav id="navbarheight" style="height: 50px;" [class.bg-light]="bgLight"
       class="navbar navbar-expand-lg navbar-light fixed-top">
-      <a class="navbar-brand" routerLink="/" (click)="scrollToElement('home')">TuitionBell</a>
+      <div (click)="scrollToElement('home')">
+        <a class="navbar-brand" [routerLink]="['home']" >TuitionBell</a>
+      </div>
+      
+
       <button class="navbar-toggler" #menubutton id="menuButton" (click)="toggleClick()" type="button" data-toggle="collapse"
         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">

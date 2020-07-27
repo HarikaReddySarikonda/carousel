@@ -2,337 +2,322 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 </head>
 <div (click)="gomenu()">
-<section id="home">
-  <div class="container-fluid">
-    <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
-      <div class="carousel-inner text-center">
-        <div class="carousel-item" [ngClass]="{active:isFirst}" *ngFor="let dataS of homeData;
+  <section id="home">
+    <div class="container-fluid">
+      <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item" [ngClass]="{active:isFirst}" *ngFor="let dataS of homeData;
           index as i;first as isFirst">
-          <div class="layer"></div>
-          <img src={{dataS.img}} class="d-block w-100" alt="...">
-          <div class="carousel-caption d-md-block">
-            <h1>{{dataS.title}}</h1>
-            <p>{{dataS.data1}}</p>
-            <p>{{dataS.data2}}</p><br><br>
+            <div class="layer"></div>
+            <img src={{dataS.img}} class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h1>{{dataS.title}}</h1>
+              <p>{{dataS.data1}}</p>
+              <p>{{dataS.data2}}</p><br><br>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about-us">
-  <br><br>
-  <div class="container card no-border">
-    <div class="card-body">
-      <div class="row card-title">
+  <section id="about-us">
+    <br><br>
+    <div class="container card no-border">
+      <div class="card-body">
+        <div class="row card-title">
+          <div class="col-12">
+            <h2 class="home-title">! About Us ! </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-12">
-          <h2 class="home-title">! About Us ! </h2>
+          <p>
+            Tuitionbell provides a platform for students who are facing hurdles in their academics or eager to learn
+            something new,
+            to find exemplary and trustworthy tutors in their locality through interactive web and mobile applications
+            to
+            enhance
+            their knowledge and skills.<br> We strive to provide high quality education to the students through
+            one-on-one
+            interactive
+            sessions with the tutor at their door step or through online live video sessions at the convenient time
+            scheduled by the student and the tutor.
+            <br> We provide a great platform of learning opportunities to students with progress tracking and an earning
+            opportunity to tutors.
+            <br> Tuitionbell also provides an open question forum to discuss and exchange knowledge on various academic
+            and general topics and
+            to provide advices regarding assignments and academic projects.<br>
+          </p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <p>
-          Tuitionbell provides a platform for students who are facing hurdles in their academics or eager to learn
-          something new,
-          to find exemplary and trustworthy tutors in their locality through interactive web and mobile applications to
-          enhance
-          their knowledge and skills.<br> We strive to provide high quality education to the students through one-on-one
-          interactive
-          sessions with the tutor at their door step or through online live video sessions at the convenient time
-          scheduled by the student and the tutor.
-          <br> We provide a great platform of learning opportunities to students with progress tracking and an earning
-          opportunity to tutors.
-          <br> Tuitionbell also provides an open question forum to discuss and exchange knowledge on various academic
-          and general topics and
-          to provide advices regarding assignments and academic projects.<br>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="services">
-  <br><br>
-  <div class="container card no-border">
-    <div class="card-body">
-      <div class="row card-title">
-        <div class="col-12">
-          <h2 class="home-title">! Services we provide ! </h2>
+  <section id="services">
+    <br><br>
+    <div class="container card no-border">
+      <div class="card-body">
+        <div class="row card-title">
+          <div class="col-12">
+            <h2 class="home-title">! Services we provide ! </h2>
+          </div>
         </div>
-      </div>
-      <div class="row card-text">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
-              <ul>
-                <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)">
-                  <div class="col-12" [ngClass]="{'activeService': selectedIndex==i }">
-                    <div class="card service no-border inherit">
-                      <div class="card-body inherit">
-                        <h5 class="card-title">{{dataS.title}}</h5>
-                        <p class="card-text">{{dataS.data}}</p>
+        <div class="row card-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <ul>
+                  <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)">
+                    <div class="col-12" [ngClass]="{'activeService': selectedIndex==i }">
+                      <div class="card service no-border inherit">
+                        <div class="card-body inherit">
+                          <h5 class="card-title">{{dataS.title}}</h5>
+                          <p class="card-text">{{dataS.data}}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <div *ngFor="let dataS of serviceData, let i = index">
-                <img src={{dataS.img}} @myAni *ngIf="i == selectedIndex" class="slide height-width-100">
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--  
-<section id="how-it-works">
-  <div class="container" style="border: solid 5px;">
-          <div  class="col-12">
-            <h2 class="home-title" >! How It Works ! </h2>
-            </div>
-    
-    <div class="container">
-    <div class="row">
-    
-      <div class="col-md-1">
-        <img (click)="showStudent()" [@studentAni]="positionStu" *ngIf="student==true" style="height: 100px; width: 100px;" src="https://cdn3.iconfinder.com/data/icons/ringtone-music-instruments/512/letter-s-key-keyboard-512.png">
-    </div>
-    <div class="col-md-1">
-      
-    <img @arrow1 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
-    </div>
-    <div class="col-md-1">
-    
-    <img @step1 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px" src="https://img2.pngio.com/usmle-step-1-symbol-usmle-step-3-png-768x768px-usmle-step-1-usmle-step-1-png-820_768.jpg">
-    </div>
-    <div class="col-md-1">
-    <img @arrow2 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
-    
-    </div>
-    <div class="col-md-1">
-    
-    <img @step2 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px" src="https://f0.pngfuel.com/png/425/749/step-2-logo-png-clip-art-thumbnail.png">
-    </div>
-    <div class="col-md-1">
-    
-    <img @arrow3 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
-    
-    </div>
-    <div class="col-md-1">
-    <img @step3 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px" src="https://p7.hiclipart.com/preview/723/583/816/usmle-step-1-computer-icons-usmle-step-3-symbol-symbol.jpg" >
-    
-    </div>
-    <div class="col-md-1">
-    <img @arrow4 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
-    </div>
-    <div class="col-md-1">
-    
-    <img @step4 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px"src="https://lh3.googleusercontent.com/proxy/ZZ0tIZNDUC-rNeiz9Bha7lMNg5_AmnJ9bI7BSboMgF_Qp1wfgPCzyT6GXBfKtOJWQp1CPTNCcv-RLi-HoOH4UZzTZ3yBfhSOdRZys9MRFKXQfuF7DVI">
-    
-    </div>
-    <div class="col-md-1">
-    <img @arrow5 *ngIf="arrow==true" style="height: 50px; width: 50px;margin:5px" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
-    
-    </div>
-    <div class="col-md-1">
-    <img @step5 *ngIf="step==true" style="height: 100px; width: 100px;margin:5px"src="https://lh3.googleusercontent.com/proxy/1W5tfLiGRAUBklzHwH6on7pIvPhPe8opPPJtUy9Iy8fUWnNsC2Km1PW4YKL3De4dRfIACVlTvKI0g_R26vO23qsBRLfeFZM0xWQAL-LzWTvvbLUwFpU">
-    
-    </div>
-    <div class="col-md-1">
-      <img [@tutorAni]="positiontutor" (click)="showtutor()"  *ngIf="tutor==true" style="height: 100px; width: 100px;" src="https://cdn3.iconfinder.com/data/icons/ringtone-music-instruments/512/letter-t-key-keyboard-512.png">
-    </div></div></div>
-    </div> 
-    
-</section> -->
-
-<section id="about-team">
-  <br><br>
-  <div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title text-center">
-            <h2 class="home-title">! Meet us at World's End !</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-1 arrowPosition">
-          <!-- controls -->
-          <!-- <button class="control " (click)="onPreviousClick()">       
-              <span class="arrow left"></span>
-            </button> -->
-        </div>
-        <div class="col-md-10">
-          <div class="container">
-            <div>
-              <div class="row">
-                <div class="col-md-4 " *ngFor="let slide of subslide">
-                  <div class="innerSlider-carousel slick-slide">
-                    <img src={{slide.img}} alt="" class="img-carousel" />
-                    <h5 class="h5-carousel">{{slide.header}}</h5>
-                    <span class="spec-customColor">{{slide.position}}</span>
-                    <p class="p-carousel">
-                      {{slide.discription}}
-                    </p>
-                  </div>
+              <div class="col-md-6 col-sm-12">
+                <div *ngFor="let dataS of serviceData, let i = index">
+                  <img src={{dataS.img}} @myAni *ngIf="i == selectedIndex" class="slide height-width-100">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-1 arrowPosition">
-          <!-- <button class="control"  (click)="onNextClick()">         
+      </div>
+    </div>
+  </section>
+<!-- 
+  <section id="how-it-works">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="home-title">! How It Works ! </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 container">
+          <div class="row">
+            <div class=" col-2">
+              <div class="img-carousel numdiv">
+                <span>1</span>
+              </div>
+            </div>
+            <div class="imgdiv col-2">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRK75yOImoF-jRTnx-OjQVl7By4alsTf11vg&usqp=CAU"
+                title="img" class="img-carousel">
+            </div>
+            <div class="textdiv col-4">
+              <h6>
+                This contains title
+              </h6>
+              <p>
+                contains other text
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-6">
+
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <section id="about-team">
+    <br><br>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title text-center">
+              <h2 class="home-title">! Meet us at World's End !</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1 arrowPosition">
+            <!-- controls -->
+            <!-- <button class="control " (click)="onPreviousClick()">       
+              <span class="arrow left"></span>
+            </button> -->
+          </div>
+          <div class="col-md-10">
+            <div class="container">
+              <div>
+                <div class="row">
+                  <div class="col-md-4 " *ngFor="let slide of subslide">
+                    <div class="innerSlider-carousel slick-slide">
+                      <img src={{slide.img}} alt="" class="img-carousel" />
+                      <h5 class="h5-carousel">{{slide.header}}</h5>
+                      <span class="spec-customColor">{{slide.position}}</span>
+                      <p class="p-carousel">
+                        {{slide.discription}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1 arrowPosition">
+            <!-- <button class="control"  (click)="onNextClick()">         
                 <span class="arrow right"></span>
               </button> -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="faq">
-  <div class="container">
-    <br><br>
-    <div class="col-md-12">
-      <div class="section-title text-center wow zoomIn">
-        <h2 class="home-title"> ! Frequently Asked Questions !</h2>
+  <section id="faq">
+    <div class="container">
+      <br><br>
+      <div class="col-md-12">
+        <div class="section-title text-center wow zoomIn">
+          <h2 class="home-title"> ! Frequently Asked Questions !</h2>
+        </div>
       </div>
-    </div>
 
-    <div class="row" id="accordion">
-      <div class="col-md-6" >
-        <h3 class="home-title">Student FAQs</h3>
-        <div class="panel-group" role="tablist" aria-multiselectable="false" >
-          <div class="panel panel-default" *ngFor="let s_faq of student_faq">
-            <div class="panel-heading" role="tab" id="heading{{s_faq.id}}">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" attr.data-target="#collapse{{s_faq.id}}"
-                  aria-expanded="false" attr.aria-controls="collapse{{s_faq.id}}">
-                  {{s_faq.question}}
-                </a>
-              </h4>
+      <div class="row" id="accordion">
+        <div class="col-md-6">
+          <h3 class="home-title">Student FAQs</h3>
+          <div class="panel-group" role="tablist" aria-multiselectable="false">
+            <div class="panel panel-default" *ngFor="let s_faq of student_faq">
+              <div class="panel-heading" role="tab" id="heading{{s_faq.id}}">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" attr.data-target="#collapse{{s_faq.id}}"
+                    aria-expanded="false" attr.aria-controls="collapse{{s_faq.id}}">
+                    {{s_faq.question}}
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse{{s_faq.id}}" class="panel-collapse collapse" role="tabpanel"
+                attr.aria-labelledby="heading{{s_faq.id}}" data-parent="#accordion">
+                <div class="panel-body">
+                  <p>{{s_faq.answer}}</p>
+                </div>
+              </div>
             </div>
-            <div id="collapse{{s_faq.id}}" class="panel-collapse collapse" role="tabpanel" attr.aria-labelledby="heading{{s_faq.id}}"
-              data-parent="#accordion">
-              <div class="panel-body">
-                <p>{{s_faq.answer}}</p>
+          </div>
+        </div>
+        <!--- END COL -->
+        <div class="col-md-6">
+          <h3 class="home-title">Tutor FAQs</h3>
+          <div class="panel-group" role="tablist" aria-multiselectable="false">
+            <div class="panel panel-default" *ngFor="let t_faq of tutor_faq">
+              <div class="panel-heading" role="tab" id="heading{{t_faq.id}}">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" attr.data-target="#collapse{{t_faq.id}}"
+                    aria-expanded="false" attr.aria-controls="collapse{{t_faq.id}}">
+                    {{t_faq.question}}
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse{{t_faq.id}}" class="panel-collapse collapse" role="tabpanel"
+                attr.aria-labelledby="heading{{t_faq.id}}" data-parent="#accordion">
+                <div class="panel-body">
+                  <p>{{t_faq.answer}}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--- END COL -->
-      <div class="col-md-6" >
-        <h3 class="home-title">Tutor FAQs</h3>
-        <div class="panel-group" role="tablist" aria-multiselectable="false" >
-          <div class="panel panel-default" *ngFor="let t_faq of tutor_faq">
-            <div class="panel-heading" role="tab" id="heading{{t_faq.id}}">
-              <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" attr.data-target="#collapse{{t_faq.id}}"
-                  aria-expanded="false" attr.aria-controls="collapse{{t_faq.id}}">
-                  {{t_faq.question}}
-                </a>
-              </h4>
+      <!--- END ROW -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hey Welcome!!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>We are still working on the page.. Will get back soon..</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-us">
+    <div class="container">
+      <br><br>
+      <div class="col-md-12">
+        <div class="section-title text-center wow zoomIn">
+          <h2 class="home-title"> ! Contact Us !</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" *ngIf="!mobile">
+          <img src="../../../assets/Images/desk-office-pen-ruler-2097.jpg" style="height: inherit; width: inherit;">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <br>
+            <br>
+            <div class="form-row clearfix">
+              <input name="name" id="name" type="text" required placeholder="Your Name"
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
             </div>
-            <div id="collapse{{t_faq.id}}" class="panel-collapse collapse" role="tabpanel" attr.aria-labelledby="heading{{t_faq.id}}"
-              data-parent="#accordion">
-              <div class="panel-body">
-                <p>{{t_faq.answer}}</p>
-              </div>
+            <br>
+            <div class="form-row clearfix">
+              <input name="email" id="email" type="email" required placeholder="Email address"
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
             </div>
-          </div>
+            <br>
+            <div class="form-row clearfix">
+              <textarea name="comments" id="comments" required placeholder="Your Comments"
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" ngModel></textarea>
+            </div>
+            <br>
+            <div class="text-center">
+              <button class="btn btn-primary send" data-toggle="modal" data-target="#contactUsModal">Send</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!--- END ROW -->
-  </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Hey Welcome!!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>We are still working on the page.. Will get back soon..</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="contact-us">
-  <div class="container">
-    <br><br>
-    <div class="col-md-12">
-      <div class="section-title text-center wow zoomIn">
-        <h2 class="home-title"> ! Contact Us !</h2>
+    <!-- Modal -->
+    <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactUsModalLabel">Congratulations!!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Your query is submitted successfully. We will get back to you soon..</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary send" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" *ngIf="!mobile">
-        <img src="../../../assets/Images/desk-office-pen-ruler-2097.jpg" style="height: inherit; width: inherit;">
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-          <br>
-          <br>
-          <div class="form-row clearfix">
-            <input name="name" id="name" type="text" required placeholder="Your Name" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
-          </div>
-          <br>
-          <div class="form-row clearfix">
-            <input name="email"id="email" type="email" required placeholder="Email address" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
-          </div>
-          <br>
-          <div class="form-row clearfix">
-            <textarea name="comments" id="comments" required placeholder="Your Comments" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" ngModel></textarea>
-          </div>
-          <br>
-          <div class="text-center">
-            <button class="btn btn-primary send" data-toggle="modal" data-target="#contactUsModal">Send</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  
-  <!-- Modal -->
-  <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel"
-  aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contactUsModalLabel">Congratulations!!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Your query is submitted successfully. We will get back to you soon..</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary send" data-dismiss="modal">Ok</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section>
+  </section>
 </div>

@@ -132,8 +132,21 @@
   align-self: center;
   padding: auto;
   text-align: center;
-}
+  }
 
+.arrowindicator{
+  background-image: url('https://www.volunteercenter.info/assets/vrline21.jpg');
+ //background-image: url('https://etc.usf.edu/clipart/13100/13117/square_13117_lg.gif');
+//background-image: url('https://illuminateddandelion.files.wordpress.com/2016/03/vertical-line.jpg?w=640');
+//background-image: url('https://www.researchgate.net/profile/Kyriaki_Mikellidou/publication/264201750/figure/fig2/AS:288776888434689@1445861183969/The-vertical-horizontal-illusion-Although-of-equal-lengths-the-vertical-line-looks.png');
+//background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAJFBMVEX///8AAADz8/Pg4ODu7u78/PxhYWEdHR1HR0deXl4WFhZDQ0PMRTziAAABEElEQVR4nO3dMW7DQBAEQdmyJVP6/38dk5ECEodeVL1gOtwDAd5u8KHtsbetHnS6r6PVg06nsE9hn8I+hX0K+xT2KeybX3g/Wj0IAAAALvF67r1WDzrd/FcMhX0K+xT2KexT2KewT2Hf/MKfo9WDAAAA4BLzb3yFfQr7FPYp7FPYp7BPYZ/Cvu+j1YMAAABY4vdo9aDTzb/xFfYp7FPYp7BPYZ/CPoV9Cvvm3/gAAAB8Yv43wvNvfIV9CvsU9insU9insE9hn0IAAACYYf6/gubf+Ar7FPYp7FPYp7BPYZ/CvvmF77+99+pBAAAAcIn70epBp5v/iqGwT2Gfwj6FfQr7FPYp7JtfuD32ttWD6PgHFBULY1FUbJQAAAAASUVORK5CYII='); 
+
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 2%;
+  
+}
 // FAQ CSS
 .btn {
   border: none;

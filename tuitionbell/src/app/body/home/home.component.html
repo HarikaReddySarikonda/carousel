@@ -33,22 +33,8 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <p>
-            Tuitionbell provides a platform for students who are facing hurdles in their academics or eager to learn
-            something new,
-            to find exemplary and trustworthy tutors in their locality through interactive web and mobile applications
-            to
-            enhance
-            their knowledge and skills.<br> We strive to provide high quality education to the students through
-            one-on-one
-            interactive
-            sessions with the tutor at their door step or through online live video sessions at the convenient time
-            scheduled by the student and the tutor.
-            <br> We provide a great platform of learning opportunities to students with progress tracking and an earning
-            opportunity to tutors.
-            <br> Tuitionbell also provides an open question forum to discuss and exchange knowledge on various academic
-            and general topics and
-            to provide advices regarding assignments and academic projects.<br>
+          <p *ngFor="let context of aboutUs">
+          {{context}}
           </p>
         </div>
       </div>
@@ -92,8 +78,9 @@
       </div>
     </div>
   </section>
-<!-- 
-  <section id="how-it-works">
+
+  <!-- <section id="how-it-works">
+    <br><br>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -101,37 +88,31 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6 container">
-          <div class="row">
-            <div class=" col-2">
+        <div class="col-6 container"   *ngFor="let work of howItWorks;">
+          <div class="row " *ngFor="let step of work; index as i">
+            <div class=" col-2" [ngClass]="{'arrowindicator': i+1!=work.length}">
               <div class="img-carousel numdiv">
-                <span>1</span>
+                <span>{{i+1}}</span>
               </div>
             </div>
             <div class="imgdiv col-2">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRK75yOImoF-jRTnx-OjQVl7By4alsTf11vg&usqp=CAU"
+                src="{{step.image}}"
                 title="img" class="img-carousel">
             </div>
-            <div class="textdiv col-4">
+            <div class="textdiv col-8">
               <h6>
-                This contains title
+                {{step.title}}
               </h6>
               <p>
-                contains other text
+                   {{step.discription}}
               </p>
             </div>
           </div>
-
-
-        </div>
-        <div class="col-6">
-
         </div>
       </div>
-
     </div>
-  </section> -->
+  </section>  -->
 
   <section id="about-team">
     <br><br>

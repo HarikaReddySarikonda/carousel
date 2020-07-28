@@ -24,6 +24,11 @@ export class HomeComponent implements OnInit {
    // this.mobile=false;  
   //}
   }
+  //About Us
+  aboutUs = this._contentReader.getAboutUsData();
+
+  //how-It-Works
+  public howItWorks =  this._contentReader.getHowItWorksData();
 
   // Home Carousel
   public homeData = this._contentReader.getHomeData();

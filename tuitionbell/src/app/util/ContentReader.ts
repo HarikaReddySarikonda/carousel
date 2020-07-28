@@ -4,8 +4,11 @@ import { Injectable } from '@angular/core';
 import services from '../../content/homePage/services.json';
 import team from '../../content/homePage/team.json';
 import home_data from '../../content/homePage/home-carousel.json';
-import faq from '../../content/homePage/faq.json'
-import blog from '../../content/blogs/blog.json'
+import faq from '../../content/homePage/faq.json';
+import blog from '../../content/blogs/blog.json';
+import howItWorks from '../../content/homePage/howItWorks.json';
+import aboutUs from '../../content/homePage/aboutUs.json';
+
 
 @Injectable({
   providedIn:'root'
@@ -30,6 +33,12 @@ export class ContentReader{
 
  getBlogData() {
    return blog;
+ }
+ getHowItWorksData(){
+   return howItWorks;
+ }
+ getAboutUsData(){
+   return aboutUs;
  }
 
 }

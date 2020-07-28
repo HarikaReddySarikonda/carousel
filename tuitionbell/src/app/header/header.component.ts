@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit {
   public homeOffset: Number = null;
   public aboutusOffset: Number = null;
   public servicesOffset: Number = null;
+  public howItWorksOffset: Number = null;
   public aboutteamOffset: Number = null;
   public faqOffset: Number = null;
   public contactusOffset: Number = null;
@@ -35,13 +36,14 @@ export class HeaderComponent implements OnInit {
     this.homeOffset = document.getElementById("home").offsetTop;
     this.aboutusOffset = document.getElementById("about-us").offsetTop;
     this.servicesOffset = document.getElementById("services").offsetTop;
+   // this.howItWorksOffset = document.getElementById("how-it-works").offsetTop;
     this.aboutteamOffset = document.getElementById("about-team").offsetTop;
     this.faqOffset = document.getElementById("faq").offsetTop;
     this.contactusOffset = document.getElementById("contact-us").offsetTop;
     this.aboutusOffset = document.getElementById("about-us").offsetTop;
     this.navbarheight = document.getElementById("navbarheight").offsetHeight;
     } 
-     if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 7; }
+     if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 8; }
      else {this.currentActive = 1;}
 
   }
@@ -61,16 +63,18 @@ export class HeaderComponent implements OnInit {
       this.currentActive = 2;
     } else if (this.comVar >= this.servicesOffset && this.comVar < this.aboutteamOffset) {
       this.currentActive = 3;
-    } else if (this.comVar >= this.aboutteamOffset && this.comVar < this.faqOffset) {
-      this.currentActive = 4;
-    } else if (this.comVar >= this.faqOffset && this.comVar < this.contactusOffset) {
+    } //else if (this.comVar >= this.howItWorksOffset && this.comVar < this.aboutteamOffset) {
+      //this.currentActive = 4; } 
+      else if (this.comVar >= this.aboutteamOffset && this.comVar < this.faqOffset) {
       this.currentActive = 5;
-    } else if (this.comVar >= this.contactusOffset) {
+    } else if (this.comVar >= this.faqOffset && this.comVar < this.contactusOffset) {
       this.currentActive = 6;
+    } else if (this.comVar >= this.contactusOffset) {
+      this.currentActive = 7;
     } else { this.currentActive = 0; }
     
   }
-   if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 7; }
+   if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 8; }
 
     this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
     this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");

@@ -9,14 +9,16 @@ import { PageNotFoundComponent } from '../app/page-not-found/page-not-found.comp
 const routes: Routes = [
   {path: 'home', component: BodyComponent},
   {path: 'blogs', component: BlogsComponent},
-  { path: 'blogs/:id', component: BlogComponent },
+  {path: 'blogs/:id', component: BlogComponent},
   {path:'', redirectTo:'/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'top'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

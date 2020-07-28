@@ -10,7 +10,6 @@ import { ContentReader } from '../../util/ContentReader';
 export class BlogComponent implements OnInit {
 
   public id: number;
-  public selectedIndex: number;
 
   constructor(private route: ActivatedRoute, private _contentReader: ContentReader) {}
 
@@ -23,9 +22,4 @@ export class BlogComponent implements OnInit {
   updateId(id: number){
     this.id = id - 1;
   }
-
-  showTab(index : number) {
-    this.selectedIndex = index;
-  }
-
 }

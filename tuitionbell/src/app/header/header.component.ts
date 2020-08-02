@@ -76,10 +76,10 @@ export class HeaderComponent implements OnInit {
   }
    if(window.location.href.indexOf('blog')  >-1){ this.currentActive = 8; }
 
-    this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
-    this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");
-    this.menubuttonElement.nativeElement.classList.add("collapsed");
-    this.menuElement.nativeElement.classList.remove("show");
+  //   this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
+  //   this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");
+  //   this.menubuttonElement.nativeElement.classList.add("collapsed");
+  //   this.menuElement.nativeElement.classList.remove("show");   
   }
 
 
@@ -104,4 +104,18 @@ export class HeaderComponent implements OnInit {
     console.log(window.pageYOffset);
   }
 
+   // menu disappears on clicking outside
+  //window.onClick = this.myFunction;
+  
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {  
+     if (this.menubuttonElement.nativeElement.contains(event.target)==false)
+     {
+  //   this.menubuttonElement.nativeElement.click();
+    this.menubuttonElement.nativeElement.getAttribute("aria-expanded");
+   this.menubuttonElement.nativeElement.setAttribute("aria-expanded","false");
+     this.menubuttonElement.nativeElement.classList.add("collapsed");
+     this.menuElement.nativeElement.classList.remove("show"); 
+   } 
+  }
 }

@@ -147,6 +147,20 @@ background-position: center;
   padding-top: 2%;
   
 }
+.grad{
+  background-image: linear-gradient(to right, rgba(225,0,0,1),rgba(225,0,0,0));
+}
+.verticalAlign{
+ transform: rotate(270deg);
+ //writing-mode: vertical-lr;
+ //transform-origin: bottom right; 
+ // margin-left: 4rem;
+ position: absolute;
+ margin-left: -356%;
+ letter-spacing: 54px;
+ margin-top: 335%;
+ //@include transform-origin(0 0);
+}
 // FAQ CSS
 .btn {
   border: none;

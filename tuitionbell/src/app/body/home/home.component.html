@@ -1,7 +1,6 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 </head>
-<div (click)="gomenu()">
   <section id="home">
     <div class="container-fluid">
       <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
@@ -79,28 +78,41 @@
     </div>
   </section>
 
-  <!-- <section id="how-it-works">
+   <section id="how-it-works">
     <br><br>
-    <div class="container">
+    <div class="">
       <div class="row">
         <div class="col-12">
           <h2 class="home-title">! How It Works ! </h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-6 container"   *ngFor="let work of howItWorks;">
+      <div class="row " >
+        <div class="col-6" *ngFor="let work of howItWorks;index as n">
+          <div class="row" >
+        <div class="col-1" style="text-align:center;  background-color: #c8dd82;" *ngIf="n==0">
+          <h2 class="verticalAlign">TUTOR</h2>
+        </div>
+        <div class="col-1" style="text-align: center;background-color:  #c8dd82;" *ngIf="n==1">
+          <h2 class="verticalAlign">STUDENT</h2>
+        </div> 
+        <div class="col-11 container ">
           <div class="row " *ngFor="let step of work; index as i">
-            <div class=" col-2" [ngClass]="{'arrowindicator': i+1!=work.length}">
-              <div class="img-carousel numdiv">
+            <div class=" col-1" style="background-color:  #c8dd82; ">
+              
+            </div>
+            <div class="col-1" style="background-color:  #c8dd82;padding-top: 4%;border-left: solid;">
+              <div class="img-carousel numdiv" style="position: absolute;margin-left: -56%;">
                 <span>{{i+1}}</span>
               </div>
             </div>
-            <div class="imgdiv col-2">
+            <!-- ================================= -->
+            
+            <div class="imgdiv col-1" style="position: absolute;margin-left: 11%;padding-top: 2%;padding-bottom: 2%;">
               <img
                 src="{{step.image}}"
                 title="img" class="img-carousel">
             </div>
-            <div class="textdiv col-8">
+            <div class="textdiv col-9" style="padding-left: 5%;padding-top: 2%;padding-bottom: 2%;">
               <h6>
                 {{step.title}}
               </h6>
@@ -109,10 +121,10 @@
               </p>
             </div>
           </div>
-        </div>
+        </div></div>
       </div>
-    </div>
-  </section>  -->
+    </div></div>
+  </section>  
 
   <section id="about-team">
     <br><br>
@@ -301,4 +313,3 @@
     </div>
 
   </section>
-</div>

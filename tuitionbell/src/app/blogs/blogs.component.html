@@ -31,8 +31,8 @@
       </div>       
       
       <div class="row card-row" *ngFor="let blog of blogsContent, let index=index">
-        <div class="column col-md-2">
-          <div class="card card-style h-100">
+        <div class="column col-md-2 col-sm-12" *ngIf="!mobile">{{mobile}}
+          <div class="card card-style h-100"> 
             <p class="card-text leftpanel">
               Author: ABC<br>
               Date : 28th Jul<br>
@@ -40,19 +40,21 @@
             </p>
           </div>
         </div>
-        <div class="column col-md-10">
+        <div class="column col-md-10 col-sm-12">
           <div class="card card-style container h-100" [routerLink]="[ blog.id ]">
             <div class="row">
               <ng-template [ngIf]="mobile" [ngIfElse]="desktopVersion">
                 <div class="card-body">
                   <h5 class="card-title cardTitle">{{ blog.name }}</h5>
-                  <div class="col-md-3" >
+                  <div class="col-sm-3" >
                     <img class="imageStyle" src="{{ blog.img }}">
                   </div>
+                  <div class="col-sm-9">
                   <p class="card-text">
                     {{ blogs[index] }}<br>
                     <a class="read">Read more...</a>
                   </p>
+                </div>
                 </div>
               </ng-template>  
               <ng-template #desktopVersion>

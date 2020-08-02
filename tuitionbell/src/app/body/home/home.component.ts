@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
    // this.mobile=false;  
   //}
   }
-  //About Us
+    //About Us
   aboutUs = this._contentReader.getAboutUsData();
 
   //how-It-Works
